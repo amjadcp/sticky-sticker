@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
+import { DualPathSection } from '../components/DualPathSection';
+import { TrustBadges } from '../components/TrustBadges';
 import { CategoryFilters } from '../components/CategoryFilters';
 import { PromptGallery } from '../components/PromptGallery';
 import { Footer } from '../components/Footer';
@@ -56,18 +58,34 @@ export const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-canvas text-ink">
-      {/* Header (No Search, No Join Now, No Notifications, No Profile) */}
       <Header />
 
       {/* Main Content */}
-      <main className="flex-1 space-y-6">
+      <main className="flex-1 space-y-4 sm:space-y-6">
         
-        {/* Full-Bleed 4-Column Hero Banner (Pixvu Style) */}
+        {/* Full-Bleed 4-Column Hero Banner */}
         <Hero onSelectCategory={handleSelectCategory} />
+
+        {/* Two Clear Ways to Order (AI Prompts or Direct Photo Upload) */}
+        <DualPathSection />
 
         {/* Prompt Gallery & Filters Container */}
         <section id="designs" className="container-custom py-2 space-y-4">
           
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pt-2">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-indigo-primary">
+                AI Inspiration Gallery
+              </span>
+              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-ink mt-0.5">
+                Popular Design Styles
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm text-ink-muted">
+              Pick a style to generate in Gemini/ChatGPT, then print with us from ₹49.
+            </p>
+          </div>
+
           {/* Category Filter Pills & Sort Bar */}
           <CategoryFilters
             categories={CATEGORIES}
@@ -81,16 +99,11 @@ export const Home: React.FC = () => {
           <PromptGallery prompts={filteredPrompts} />
         </section>
 
+        {/* E-Commerce Trust Badges */}
+        <TrustBadges />
+
         {/* Bottom CTA Section */}
-        <section className="container-custom pt-8 pb-4">
-          <div className="space-y-3 text-center max-w-2xl mx-auto mb-8">
-            <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-ink">
-              Made for your photos.
-            </h2>
-            <p className="text-sm text-ink-muted leading-relaxed">
-              Found your favourite prompt direction? Copy it, create your image in Gemini, then send it to {siteConfig.brandName} for high quality physical sticker printing.
-            </p>
-          </div>
+        <section className="container-custom pb-6">
           <PrintCTA />
         </section>
       </main>

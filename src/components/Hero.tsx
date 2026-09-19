@@ -1,6 +1,7 @@
 import React from 'react';
 import { siteConfig } from '../config/siteConfig';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, UploadCloud } from 'lucide-react';
+import { useOrderModal } from '../context/OrderModalContext';
 
 interface StripItem {
   number: string;
@@ -35,6 +36,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onSelectCategory }) => {
+  const { openOrderModal } = useOrderModal();
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -50,45 +53,52 @@ export const Hero: React.FC<HeroProps> = ({ onSelectCategory }) => {
   };
 
   return (
-    <section className="w-full bg-canvas pb-6 pt-2">
+    <section className="w-full bg-canvas pb-4 pt-2">
       <div className="container-custom px-0 sm:px-4">
         
-        {/* 5-Column Full-Bleed Banner Grid (Pixvu Reference Style - Wider text column) */}
+        {/* 5-Column Full-Bleed Banner Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-1.5 sm:gap-2 rounded-2xl overflow-hidden shadow-elevated bg-ink">
           
           {/* Column 1 (Spans 2): Vivid Indigo Text Block */}
-          <div className="lg:col-span-2 bg-indigo-primary text-white p-8 sm:p-10 lg:p-12 flex flex-col justify-between min-h-[460px] lg:min-h-[540px]">
+          <div className="lg:col-span-2 bg-indigo-primary text-white p-8 sm:p-10 lg:p-12 flex flex-col justify-between min-h-[480px] lg:min-h-[540px]">
             <div className="space-y-6">
               
               {/* Eyebrow */}
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold tracking-widest uppercase text-white/90">
-                  {siteConfig.brandName} / VISUAL DIRECTIONS
+                  {siteConfig.brandName} / CUSTOM STICKERS
                 </span>
                 <div className="h-px w-8 bg-white/40" />
               </div>
 
               {/* Main Display Headline */}
-              <h1 className="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight">
-                Put your favourite <br />
-                <span className="font-bold">people</span> <br />
-                <span className="italic">on a sticker.</span>
+              <h1 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] tracking-tight">
+                Turn your photos &amp; AI art into <br />
+                <span className="font-bold italic">custom stickers.</span>
               </h1>
 
               {/* Supporting Copy */}
-              <p className="text-sm sm:text-base text-white/85 leading-relaxed max-w-xs font-normal">
+              <p className="text-sm sm:text-base text-white/90 leading-relaxed max-w-sm font-normal">
                 {siteConfig.heroSubheadline}
               </p>
             </div>
 
-            {/* Primary Action Pill Button */}
-            <div className="pt-6">
+            {/* E-Commerce Action Buttons */}
+            <div className="pt-6 flex flex-wrap items-center gap-3">
               <button
-                onClick={() => scrollToSection('designs')}
+                onClick={() => openOrderModal()}
                 className="px-6 py-3.5 rounded-full bg-white text-ink font-bold text-sm shadow-md hover:bg-white/90 active:scale-[0.98] transition-all duration-200 inline-flex items-center gap-2 group min-h-[44px]"
               >
-                <span>Shop Stickers</span>
-                <ArrowRight className="w-4 h-4 text-ink group-hover:translate-x-1 transition-transform" />
+                <UploadCloud className="w-4 h-4 text-indigo-primary" />
+                <span>Order Custom Sticker</span>
+              </button>
+
+              <button
+                onClick={() => scrollToSection('designs')}
+                className="px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 transition-all duration-200 inline-flex items-center gap-2 min-h-[44px]"
+              >
+                <Sparkles className="w-4 h-4 text-amber-300" />
+                <span>Explore AI Styles</span>
               </button>
             </div>
           </div>

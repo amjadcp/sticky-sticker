@@ -1,6 +1,5 @@
 import React from 'react';
-import { siteConfig } from '../config/siteConfig';
-import { Copy, Sparkles, Image as ImageIcon, Printer } from 'lucide-react';
+import { Sparkles, Image as ImageIcon, Printer, Truck } from 'lucide-react';
 
 interface Step {
   number: string;
@@ -13,27 +12,27 @@ export const WorkflowSteps: React.FC = () => {
   const steps: Step[] = [
     {
       number: '01',
-      title: 'Copy the prompt',
-      description: 'Tap "Copy prompt" to copy the ready-to-use prompt.',
-      icon: <Copy className="w-5 h-5 text-indigo-primary" />,
-    },
-    {
-      number: '02',
-      title: 'Open Gemini',
-      description: 'Paste the prompt into Gemini and attach your reference image.',
+      title: 'Pick a Style or Photo',
+      description: 'Browse our AI style prompts for inspiration, or grab any favourite photo directly from your camera roll.',
       icon: <Sparkles className="w-5 h-5 text-indigo-primary" />,
     },
     {
-      number: '03',
-      title: 'Create your image',
-      description: 'Generate the image and make any final changes you want.',
+      number: '02',
+      title: 'Generate or Prepare',
+      description: 'Generate with Gemini, ChatGPT, or Midjourney, or simply select your personal photo ready for print.',
       icon: <ImageIcon className="w-5 h-5 text-indigo-primary" />,
     },
     {
-      number: '04',
-      title: 'Print it',
-      description: `Click "Print with ${siteConfig.brandName}" and submit your generated image through our Google Form.`,
+      number: '03',
+      title: 'Submit in 60 Seconds',
+      description: 'Click "Print Sticker" to upload your ready image, choose your dimensions & quantity, and enter your delivery address.',
       icon: <Printer className="w-5 h-5 text-indigo-primary" />,
+    },
+    {
+      number: '04',
+      title: 'Confirm, Pay & Receive',
+      description: 'Receive a secure payment link (UPI/Card). Once confirmed and paid, your stickers arrive within 7–12 business days!',
+      icon: <Truck className="w-5 h-5 text-indigo-primary" />,
     },
   ];
 

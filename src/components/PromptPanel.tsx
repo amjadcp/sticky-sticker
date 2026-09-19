@@ -3,6 +3,7 @@ import { copyToClipboard } from '../utils/clipboard';
 import { trackEvent } from '../utils/analytics';
 import { siteConfig } from '../config/siteConfig';
 import { Copy, Check, Heart, Share2, Printer, MoreVertical, Sparkles } from 'lucide-react';
+import { useOrderModal } from '../context/OrderModalContext';
 
 interface PromptPanelProps {
   promptText: string;
@@ -20,6 +21,7 @@ export const PromptPanel: React.FC<PromptPanelProps> = ({
   copiesCount = 155,
   likesCount = 1,
 }) => {
+  const { openOrderModal } = useOrderModal();
   const [copied, setCopied] = useState(false);
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(likesCount);
@@ -143,17 +145,18 @@ export const PromptPanel: React.FC<PromptPanelProps> = ({
             )}
           </button>
 
-          {/* Button 2: Print Your Sticker (Just below Copy Prompt button) */}
-          <a
-            href={siteConfig.googleFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent('print_click', { prompt_id: promptId })}
-            className="w-full py-3.5 px-4 bg-ink hover:bg-black text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99] focus:outline-none"
+          {/* Button 2: Print Your Sticker */}
+          <button
+            onClick={() => openOrderModal({ promptTitle, promptId })}
+            className="w-full py-3.5 px-4 bg-indigo-primary hover:bg-indigo-dark text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-indigo-glow transition-all active:scale-[0.99] focus:outline-none"
           >
-            <Printer className="w-4 h-4 text-amber-400" />
-            <span>Print your sticker</span>
-          </a>
+            <Printer className="w-4 h-4 text-white" />
+            <span>Print Your Sticker</span>
+          </button>
+
+          <p className="text-[11px] text-center text-ink-muted pt-1">
+            ✨ Direct print on waterproof vinyl sheets • Delivery in 7–12 business days.
+          </p>
 
         </div>
 

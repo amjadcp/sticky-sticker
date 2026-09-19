@@ -1,7 +1,11 @@
 import React from 'react';
 import { PRICING_TIERS } from '../data/pricing';
+import { useOrderModal } from '../context/OrderModalContext';
+import { UploadCloud } from 'lucide-react';
 
 export const PricingTable: React.FC = () => {
+  const { openOrderModal } = useOrderModal();
+
   return (
     <section id="pricing" className="bg-surface rounded-card border border-border-subtle p-6 sm:p-8 shadow-subtle space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
@@ -13,9 +17,6 @@ export const PricingTable: React.FC = () => {
             Pricing & Formats
           </h2>
         </div>
-        {/* <p className="text-xs text-ink-muted bg-softGray px-3 py-1.5 rounded-full w-max">
-          Prices starting at • Shipping & special finishing extra
-        </p> */}
       </div>
 
       {/* Desktop Table View */}
@@ -29,7 +30,7 @@ export const PricingTable: React.FC = () => {
               <th className="py-3.5 px-5 font-semibold">Recommended Use</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-border-subtle text-sm">
+          <tbody className="divide-y border-border-subtle text-sm">
             {PRICING_TIERS.map((tier) => (
               <tr key={tier.id} className="hover:bg-canvas/60 transition-colors">
                 <td className="py-4 px-5 font-bold text-ink font-mono">{tier.dimensions}</td>
@@ -59,6 +60,20 @@ export const PricingTable: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Bottom Notes & CTA */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-border-subtle">
+        <p className="text-xs text-ink-muted text-center sm:text-left">
+          💡 <strong>Transparent Ordering:</strong> We print your exact image on durable vinyl sheets with clean, neat cuts. Secure payment link sent after receiving your order details; delivered within 7–12 business days.
+        </p>
+        <button
+          onClick={() => openOrderModal()}
+          className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-indigo-primary hover:bg-indigo-dark text-white font-bold text-xs shrink-0 shadow-indigo-glow flex items-center justify-center gap-1.5 transition-all active:scale-95"
+        >
+          <UploadCloud className="w-3.5 h-3.5" />
+          <span>Order Custom Sticker</span>
+        </button>
       </div>
     </section>
   );

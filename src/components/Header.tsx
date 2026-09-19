@@ -1,25 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { siteConfig } from '../config/siteConfig';
-import { Sparkles, Menu, X } from 'lucide-react';
+import { Menu, X, UploadCloud } from 'lucide-react';
+import { useOrderModal } from '../context/OrderModalContext';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { openOrderModal } = useOrderModal();
 
   const isHome = location.pathname === '/';
-
-  const scrollToSection = (id: string) => {
-    setMobileMenuOpen(false);
-    if (!isHome) {
-      window.location.href = `/#${id}`;
-      return;
-    }
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <header className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-border-subtle/80 transition-all">
@@ -70,6 +60,15 @@ export const Header: React.FC = () => {
           >
             Pricing
           </Link>
+
+          {/* Primary Header CTA */}
+          <button
+            onClick={() => openOrderModal()}
+            className="px-4 py-2 rounded-full bg-indigo-primary hover:bg-indigo-dark text-white font-bold text-xs shadow-indigo-glow transition-all duration-200 inline-flex items-center gap-1.5 active:scale-95"
+          >
+            <UploadCloud className="w-3.5 h-3.5" />
+            <span>Print Sticker</span>
+          </button>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -109,6 +108,16 @@ export const Header: React.FC = () => {
             >
               Pricing
             </Link>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openOrderModal();
+              }}
+              className="mt-2 w-full py-3 px-4 rounded-xl bg-indigo-primary text-white font-bold text-sm flex items-center justify-center gap-2 shadow-indigo-glow"
+            >
+              <UploadCloud className="w-4 h-4" />
+              <span>Order Custom Sticker</span>
+            </button>
           </nav>
         </div>
       )}

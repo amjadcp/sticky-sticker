@@ -1,10 +1,10 @@
 export const siteConfig = {
   brandName: 'PrintYourSticker',
-  tagline: 'Personalised visual keepsakes.',
-  heroEyebrow: 'PRINTYOURSTICKER / MADE FOR YOUR PEOPLE',
-  heroHeadline: 'Make a photo worth keeping.',
-  heroSubheadline: `Choose a design, add a photo of someone special, and turn the moment into a personalised sticker you'll want to keep.`,
+  tagline: 'Custom vinyl stickers from your photos & AI designs.',
+  heroEyebrow: 'PRINTYOURSTICKER / CUSTOM VINYL STICKERS',
+  heroHeadline: 'Turn Your Photos & AI Creations into Custom Vinyl Stickers.',
+  heroSubheadline: `Pick an AI style prompt to craft a personalized keepsake, or upload a photo you already have. We'll print and deliver waterproof vinyl stickers to your door within 7–12 business days.`,
   googleFormUrl: import.meta.env.VITE_GOOGLE_FORM_URL || '',
-  defaultMetaTitle: 'PrintYourSticker — Personalised Visual Keepsakes',
-  defaultMetaDescription: `PrintYourSticker turns your photos into custom stickers you’ll want to keep — choose a style, upload a photo, and we'll make your design.`,
+  defaultMetaTitle: 'PrintYourSticker — Custom Photo & AI Vinyl Stickers',
+  defaultMetaDescription: `Turn your personal photos and AI creations into high-quality custom vinyl stickers. Choose a style, submit your image, and we print and deliver within 7–12 business days.`,
 };

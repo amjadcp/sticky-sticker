@@ -48,7 +48,9 @@ export type AnalyticsEventType =
   | 'print_click'
   | 'print_cta_click'
   | 'category_select'
-  | 'reference_view';
+  | 'reference_view'
+  | 'order_modal_open'
+  | 'order_form_continue';
 
 export interface AnalyticsPayload {
   prompt_id?: string;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { PromptItem } from '../types/prompt';
-import { Sparkles, ShoppingBag, Heart } from 'lucide-react';
+import { Sparkles, Printer, Heart } from 'lucide-react';
+import { useOrderModal } from '../context/OrderModalContext';
 
 interface PromptCardProps {
   prompt: PromptItem;
@@ -12,18 +13,13 @@ export const PromptCard: React.FC<PromptCardProps> = ({ prompt }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(1);
   const navigate = useNavigate();
+  const { openOrderModal } = useOrderModal();
 
   const handleLike = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setIsLiked((prev) => !prev);
     setLikeCount((prev) => (isLiked ? prev - 1 : prev + 1));
-  };
-
-  const handleBuyClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    navigate(`/prompt/${prompt.slug}#print`);
   };
 
   return (
@@ -58,8 +54,8 @@ export const PromptCard: React.FC<PromptCardProps> = ({ prompt }) => {
           
           {/* Top Row: Price Tag & Like Button */}
           <div className="flex items-center justify-between gap-1 transform translate-y-0 sm:-translate-y-2 sm:group-hover:translate-y-0 transition-transform duration-300 pointer-events-auto">
-            <span className="bg-black/60 backdrop-blur-md text-white/90 text-[10px] sm:text-[11px] font-semibold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-white/15 shadow-sm whitespace-nowrap shrink-0">
-              From $2.99
+            <span className="bg-black/60 backdrop-blur-md text-white/95 text-[10px] sm:text-[11px] font-semibold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-white/15 shadow-sm whitespace-nowrap shrink-0 font-mono">
+              From ₹49
             </span>
             
             <button 
@@ -86,12 +82,16 @@ export const PromptCard: React.FC<PromptCardProps> = ({ prompt }) => {
 
             {/* E-Commerce Button */}
             <button
-              onClick={handleBuyClick}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openOrderModal({ promptTitle: prompt.title, promptId: prompt.id });
+              }}
               className="shrink-0 flex items-center justify-center gap-1.5 bg-white text-black p-2 sm:px-3 sm:py-1.5 rounded-full text-xs font-bold hover:bg-neutral-100 hover:scale-105 active:scale-95 transition-all shadow-lg pointer-events-auto"
-              title="Get Sticker"
+              title="Print Sticker in this Style"
             >
-              <ShoppingBag className="w-3.5 h-3.5 text-black" />
-              <span className="hidden sm:inline">Get Sticker</span>
+              <Printer className="w-3.5 h-3.5 text-indigo-primary" />
+              <span className="hidden sm:inline">Print Sticker</span>
             </button>
           </div>
         </div>
