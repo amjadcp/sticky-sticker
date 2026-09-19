@@ -13,9 +13,9 @@ export const PricingTable: React.FC = () => {
             Pricing & Formats
           </h2>
         </div>
-        <p className="text-xs text-ink-muted bg-softGray px-3 py-1.5 rounded-full w-max">
+        {/* <p className="text-xs text-ink-muted bg-softGray px-3 py-1.5 rounded-full w-max">
           Prices starting at • Shipping & special finishing extra
-        </p>
+        </p> */}
       </div>
 
       {/* Desktop Table View */}

@@ -30,8 +30,12 @@ export const Header: React.FC = () => {
           className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-primary rounded-lg p-1"
           aria-label={`${siteConfig.brandName} Home`}
         >
-          <div className="w-10 h-10 rounded-xl bg-indigo-primary flex items-center justify-center text-white shadow-indigo-glow group-hover:scale-105 transition-transform duration-200">
-            <Sparkles className="w-5 h-5 fill-white/20 text-white" />
+          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-indigo-glow group-hover:scale-105 transition-transform duration-200 bg-indigo-primary flex items-center justify-center">
+            <img 
+              src="/brand-icon.jpg" 
+              alt={`${siteConfig.brandName} Icon`}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-editorial text-2xl font-bold tracking-tight text-ink group-hover:text-indigo-primary transition-colors">
