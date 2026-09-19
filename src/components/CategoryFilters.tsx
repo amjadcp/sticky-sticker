@@ -18,10 +18,10 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
   onSortChange,
 }) => {
   return (
-    <div className="w-full bg-surface rounded-2xl p-3 border border-border-subtle shadow-subtle my-4 flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <div className="w-full bg-surface rounded-2xl p-2 md:p-3 border border-border-subtle shadow-subtle my-2 md:my-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-3">
       
       {/* Scrollable Horizontal Pill List */}
-      <div className="overflow-x-auto no-scrollbar flex items-center gap-2 py-1">
+      <div className="overflow-x-auto no-scrollbar flex items-center gap-1.5 md:gap-2 py-0.5 md:py-1">
         {categories.map((category) => {
           const isSelected = selectedCategory === category;
           const isAll = category === 'All';
@@ -30,7 +30,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
             <button
               key={category}
               onClick={() => onSelectCategory(category)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 focus:outline-none min-h-[40px] flex items-center gap-1.5 whitespace-nowrap ${
+              className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-medium transition-all duration-200 focus:outline-none min-h-[32px] md:min-h-[40px] flex items-center gap-1.5 whitespace-nowrap ${
                 isSelected
                   ? 'bg-ink text-white font-semibold shadow-sm scale-[1.01]'
                   : 'bg-canvas text-ink/80 hover:text-ink hover:bg-softGray border border-border-subtle'
@@ -49,7 +49,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
       </div>
 
       {/* Right Side Sort Dropdown */}
-      <div className="flex items-center justify-end flex-shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-border-subtle">
+      <div className="hidden md:flex items-center justify-end flex-shrink-0">
         <div className="relative">
           <select
             value={sortBy}

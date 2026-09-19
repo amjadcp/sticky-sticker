@@ -1,10 +1,10 @@
 export const siteConfig = {
   brandName: 'StickySticker',
   tagline: 'Personalised visual keepsakes.',
-  heroEyebrow: 'STICKYSTICKER / PERSONALISED VISUALS',
+  heroEyebrow: 'STICKYSTICKER / MADE FOR YOUR PEOPLE',
   heroHeadline: 'Make a photo worth keeping.',
-  heroSubheadline: 'Choose a visual direction, create the image with your preferred AI tool, then turn the result into a personalised sticker.',
+  heroSubheadline: `Choose a design, add a photo of someone special, and turn the moment into a personalised sticker you'll want to keep.`,
   googleFormUrl: import.meta.env.VITE_GOOGLE_FORM_URL || '',
-  defaultMetaTitle: 'StickySticker — Personalised AI Image Prompts & Custom Stickers',
-  defaultMetaDescription: 'Create personalised images from ready-made AI prompts, then turn your favourite results into custom stickers with StickySticker.',
+  defaultMetaTitle: 'StickySticker — Personalised Visual Keepsakes',
+  defaultMetaDescription: `StickySticker turns your photos into custom stickers you’ll want to keep — choose a style, upload a photo, and we'll make your design.`,
 };

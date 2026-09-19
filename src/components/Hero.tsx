@@ -70,9 +70,9 @@ export const Hero: React.FC<HeroProps> = ({ onSelectCategory }) => {
 
               {/* Main Display Headline */}
               <h1 className="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight">
-                Find the <br />
-                <span className="font-bold">look.</span> <br />
-                <span className="italic">Make it yours.</span>
+                Put your favourite <br />
+                <span className="font-bold">people</span> <br />
+                <span className="italic">on a sticker.</span>
               </h1>
 
               {/* Supporting Copy */}
@@ -87,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({ onSelectCategory }) => {
                 onClick={() => scrollToSection('designs')}
                 className="px-6 py-3.5 rounded-full bg-white text-ink font-bold text-sm shadow-md hover:bg-white/90 active:scale-[0.98] transition-all duration-200 inline-flex items-center gap-2 group min-h-[44px]"
               >
-                <span>View Designs</span>
+                <span>Shop Stickers</span>
                 <ArrowRight className="w-4 h-4 text-ink group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
@@ -98,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ onSelectCategory }) => {
             <div
               key={strip.number}
               onClick={() => handleStripClick(strip.category)}
-              className="relative group cursor-pointer overflow-hidden min-h-[300px] sm:min-h-[380px] lg:min-h-[540px] bg-softGray"
+              className="hidden lg:block relative group cursor-pointer overflow-hidden min-h-[300px] sm:min-h-[380px] lg:min-h-[540px] bg-softGray"
             >
               <img
                 src={strip.image}
