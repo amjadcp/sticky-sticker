@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Image as ImageIcon, Printer, Truck } from 'lucide-react';
+import { Sparkles, Image as ImageIcon, MessageCircle, Truck } from 'lucide-react';
 
 interface Step {
   number: string;
@@ -24,14 +24,14 @@ export const WorkflowSteps: React.FC = () => {
     },
     {
       number: '03',
-      title: 'Submit in 60 Seconds',
-      description: 'Click "Print Sticker" to upload your ready image, choose your dimensions & quantity, and enter your delivery address.',
-      icon: <Printer className="w-5 h-5 text-indigo-primary" />,
+      title: 'Send on WhatsApp',
+      description: 'Click "Print Sticker" to message us on WhatsApp (+91 89215 86866). Send 3 items: 1. Image, 2. Size & Qty, and 3. Delivery Address.',
+      icon: <MessageCircle className="w-5 h-5 text-indigo-primary" />,
     },
     {
       number: '04',
       title: 'Confirm, Pay & Receive',
-      description: 'Receive a secure payment link (UPI/Card). Once confirmed and paid, your stickers arrive within 7–12 business days!',
+      description: 'We review your details and send a secure payment link (UPI/Card). Once paid, your stickers arrive within 7–12 business days!',
       icon: <Truck className="w-5 h-5 text-indigo-primary" />,
     },
   ];

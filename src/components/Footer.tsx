@@ -19,6 +19,14 @@ export const Footer: React.FC = () => {
 
         {/* Right Side: Horizontal Links */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-ink-muted">
+          <a
+            href={`https://wa.me/${siteConfig.whatsappCleanNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-700 hover:text-emerald-800 font-semibold transition-colors inline-flex items-center gap-1"
+          >
+            <span>WhatsApp: {siteConfig.whatsappDisplayNumber}</span>
+          </a>
           <Link to="/how-it-works#how-it-works" className="hover:text-ink transition-colors">
             About
           </Link>

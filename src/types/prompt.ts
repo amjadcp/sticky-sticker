@@ -50,7 +50,8 @@ export type AnalyticsEventType =
   | 'category_select'
   | 'reference_view'
   | 'order_modal_open'
-  | 'order_form_continue';
+  | 'order_form_continue'
+  | 'order_whatsapp_click';
 
 export interface AnalyticsPayload {
   prompt_id?: string;

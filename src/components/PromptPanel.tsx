@@ -155,7 +155,7 @@ export const PromptPanel: React.FC<PromptPanelProps> = ({
           </button>
 
           <p className="text-[11px] text-center text-ink-muted pt-1">
-            ✨ Direct print on waterproof vinyl sheets • Delivery in 7–12 business days.
+            ✨ Quick WhatsApp order • Waterproof vinyl sheets • 7–12 days delivery
           </p>
 
         </div>

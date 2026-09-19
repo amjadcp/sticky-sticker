@@ -19,12 +19,12 @@ export const DualPathSection: React.FC = () => {
         {/* Track 1: Create with AI */}
         <div className="bg-surface rounded-2xl border border-border-subtle p-6 sm:p-7 shadow-subtle flex flex-col justify-between hover:border-indigo-primary/40 transition-all group">
           <div className="space-y-3.5">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-primary bg-indigo-light px-2.5 py-1 rounded-full flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5" />
+            <div className="flex items-center justify-between gap-2 flex-wrap">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-primary bg-indigo-light px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+                <Sparkles className="w-3.5 h-3.5 shrink-0" />
                 <span>Option A • Create with AI</span>
               </span>
-              <span className="text-xs font-semibold text-ink-muted">Ready Prompts</span>
+              <span className="text-xs font-semibold text-ink-muted shrink-0 whitespace-nowrap">Ready Prompts</span>
             </div>
 
             <h3 className="font-editorial text-xl sm:text-2xl font-bold text-ink group-hover:text-indigo-primary transition-colors">
@@ -50,12 +50,12 @@ export const DualPathSection: React.FC = () => {
         {/* Track 2: Direct Photo Upload */}
         <div className="bg-gradient-to-br from-surface to-indigo-50/40 rounded-2xl border border-indigo-primary/25 p-6 sm:p-7 shadow-subtle flex flex-col justify-between hover:border-indigo-primary transition-all group relative overflow-hidden">
           <div className="space-y-3.5">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full flex items-center gap-1.5">
-                <UploadCloud className="w-3.5 h-3.5" />
+            <div className="flex items-center justify-between gap-2 flex-wrap">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+                <UploadCloud className="w-3.5 h-3.5 shrink-0" />
                 <span>Option B • Direct Upload</span>
               </span>
-              <span className="text-xs font-semibold text-indigo-primary font-mono">From ₹49</span>
+              <span className="text-xs font-semibold text-indigo-primary font-mono shrink-0 whitespace-nowrap">From ₹49</span>
             </div>
 
             <h3 className="font-editorial text-xl sm:text-2xl font-bold text-ink group-hover:text-indigo-primary transition-colors">
@@ -63,7 +63,7 @@ export const DualPathSection: React.FC = () => {
             </h3>
 
             <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
-              Skip the AI completely. Have a picture of your pet, friends, family portrait, or personal photo? Send your ready image straight to our print queue. We print your exact file onto durable sticker sheets with clean cuts.
+              Skip the AI completely. Have a picture of your pet, friends, family portrait, or personal photo? Send your details (Image, Size &amp; Qty, Delivery Address) directly to our WhatsApp (+91 89215 86866). We print your exact file onto durable sticker sheets with clean cuts.
             </p>
           </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { PRICING_TIERS } from '../data/pricing';
 import { useOrderModal } from '../context/OrderModalContext';
 import { UploadCloud } from 'lucide-react';
+import { siteConfig } from '../config/siteConfig';
 
 export const PricingTable: React.FC = () => {
   const { openOrderModal } = useOrderModal();
@@ -65,7 +66,7 @@ export const PricingTable: React.FC = () => {
       {/* Bottom Notes & CTA */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-border-subtle">
         <p className="text-xs text-ink-muted text-center sm:text-left">
-          💡 <strong>Transparent Ordering:</strong> We print your exact image on durable vinyl sheets with clean, neat cuts. Secure payment link sent after receiving your order details; delivered within 7–12 business days.
+          💡 <strong>Simple WhatsApp Ordering:</strong> Share 1) Image, 2) Size &amp; Quantity, and 3) Delivery Address directly to our WhatsApp ({siteConfig.whatsappDisplayNumber}). We print your exact image on durable vinyl sheets with clean cuts. Secure payment link sent after review; delivered within 7–12 business days.
         </p>
         <button
           onClick={() => openOrderModal()}

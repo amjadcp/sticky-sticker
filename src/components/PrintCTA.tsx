@@ -2,6 +2,7 @@ import React from 'react';
 import { trackEvent } from '../utils/analytics';
 import { Printer, UploadCloud, ArrowRight } from 'lucide-react';
 import { useOrderModal } from '../context/OrderModalContext';
+import { siteConfig } from '../config/siteConfig';
 
 interface PrintCTAProps {
   promptId?: string;
@@ -27,7 +28,7 @@ export const PrintCTA: React.FC<PrintCTAProps> = ({ promptId, promptTitle }) => 
           Ready to turn your photo into a sticker?
         </h3>
         <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
-          Whether created with AI or chosen from your personal photos, submit your ready image in our 60-second order form. We print your exact file onto durable vinyl sheets and deliver within 7–12 business days.
+          Whether created with AI or chosen from your personal photos, order easily via WhatsApp ({siteConfig.whatsappDisplayNumber}). Just share: 1. Your image, 2. Size &amp; quantity, and 3. Delivery address. We print your exact file onto durable vinyl sheets and deliver within 7–12 business days.
         </p>
       </div>
 
