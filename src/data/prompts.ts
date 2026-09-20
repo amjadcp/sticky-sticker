@@ -12,6 +12,26 @@ export const PROMPTS: PromptItem[] = [
       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1000&q=80',
     ],
+    variants: [
+      {
+        id: 'var-1',
+        resultImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=80',
+        referenceImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80',
+        label: 'Vibrant Magenta Clay'
+      },
+      {
+        id: 'var-2',
+        resultImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
+        referenceImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80',
+        label: 'Fluid 3D Sculpt'
+      },
+      {
+        id: 'var-3',
+        resultImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1000&q=80',
+        referenceImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=80',
+        label: 'Studio Clay Figure'
+      }
+    ],
     promptText: 'A detailed 3D claymation stop-motion figure based on the subject in the attached photo. Crafted from tactile polymer clay with visible subtle fingerprint textures, warm studio lighting, soft depth of field, miniature set background with handcrafted props, cute expression, vibrant palette, Aardman and Laika animation aesthetic style, high resolution rendering.',
     supportedTool: 'Gemini',
     transformationType: 'Photo Transformation',

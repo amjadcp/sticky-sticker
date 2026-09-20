@@ -4,8 +4,10 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { PromptPanel } from '../components/PromptPanel';
 import { RelatedPrompts } from '../components/RelatedPrompts';
+import { ImageFlipCard } from '../components/ImageFlipCard';
 import { PROMPTS } from '../data/prompts';
 import { getRelatedPrompts } from '../utils/relatedPrompts';
+import { getPromptVariants } from '../utils/variantHelper';
 import { siteConfig } from '../config/siteConfig';
 import { trackEvent } from '../utils/analytics';
 import { ArrowLeft, AlertCircle } from 'lucide-react';
@@ -41,13 +43,12 @@ export const PromptDetail: React.FC = () => {
     setSelectedImageIndex(0);
   }, [prompt, slug]);
 
-  const galleryImages = useMemo(() => {
+  const variants = useMemo(() => {
     if (!prompt) return [];
-    if (prompt.referenceImages && prompt.referenceImages.length > 0) {
-      return Array.from(new Set([prompt.coverImage, ...prompt.referenceImages]));
-    }
-    return [prompt.coverImage];
+    return getPromptVariants(prompt);
   }, [prompt]);
+
+  const activeVariant = variants[selectedImageIndex] || variants[0];
 
   if (!prompt) {
     return (
@@ -97,33 +98,45 @@ export const PromptDetail: React.FC = () => {
             
             {/* LEFT: Image Column */}
             <div className="lg:col-span-6 space-y-4">
-              <div className="relative rounded-2xl overflow-hidden bg-softGray border border-border-subtle shadow-subtle">
-                <img
-                  src={galleryImages[selectedImageIndex] || prompt.coverImage}
-                  alt={prompt.title}
-                  className="w-full h-auto object-cover max-h-[580px] w-full"
+              {activeVariant && (
+                <ImageFlipCard
+                  key={`${prompt.id}-${selectedImageIndex}`}
+                  resultImage={activeVariant.resultImage}
+                  referenceImage={activeVariant.referenceImage}
+                  altText={prompt.title}
+                  aspectRatio={prompt.aspectRatio}
                 />
-              </div>
+              )}
 
-              {/* Thumbnails */}
-              {galleryImages.length > 1 && (
-                <div className="flex items-center gap-3 overflow-x-auto no-scrollbar py-1">
-                  {galleryImages.map((imgUrl, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => {
-                        setSelectedImageIndex(idx);
-                        trackEvent('reference_view', { prompt_id: prompt.id, image_index: idx });
-                      }}
-                      className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 focus:outline-none ${
-                        selectedImageIndex === idx
-                          ? 'border-indigo-primary ring-2 ring-indigo-primary/20 scale-105'
-                          : 'border-border-subtle opacity-70 hover:opacity-100'
-                      }`}
-                    >
-                      <img src={imgUrl} alt={`Reference ${idx + 1}`} className="w-full h-full object-cover" />
-                    </button>
-                  ))}
+              {/* Thumbnails showing only generated sticker images */}
+              {variants.length > 1 && (
+                <div className="space-y-1.5 pt-1">
+                  <div className="flex items-center justify-between text-xs text-ink-muted font-medium px-1">
+                    <span>Select Sticker Variant:</span>
+                    <span>{selectedImageIndex + 1} of {variants.length}</span>
+                  </div>
+                  <div className="flex items-center gap-3 overflow-x-auto no-scrollbar py-1">
+                    {variants.map((variant, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          setSelectedImageIndex(idx);
+                          trackEvent('reference_view', { prompt_id: prompt.id, image_index: idx });
+                        }}
+                        className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 focus:outline-none ${
+                          selectedImageIndex === idx
+                            ? 'border-indigo-primary ring-2 ring-indigo-primary/20 scale-105'
+                            : 'border-border-subtle opacity-75 hover:opacity-100'
+                        }`}
+                        title={variant.label || `Sticker Variant ${idx + 1}`}
+                      >
+                        <img src={variant.resultImage} alt={`Variant ${idx + 1}`} className="w-full h-full object-cover" />
+                        {selectedImageIndex === idx && (
+                          <div className="absolute inset-0 bg-indigo-primary/10 border border-indigo-primary rounded-xl" />
+                        )}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

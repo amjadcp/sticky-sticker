@@ -13,6 +13,13 @@ export type Category =
   | 'Gaming-Inspired'
   | 'Retro';
 
+export interface ImageVariant {
+  id?: string;
+  resultImage: string;
+  referenceImage: string;
+  label?: string;
+}
+
 export interface PromptItem {
   id: string;
   slug: string;
@@ -20,6 +27,7 @@ export interface PromptItem {
   category: Exclude<Category, 'All'>;
   coverImage: string;
   referenceImages?: string[];
+  variants?: ImageVariant[];
   promptText: string;
   supportedTool: 'Gemini' | 'ChatGPT' | 'Midjourney' | 'Other';
   transformationType?: string;
