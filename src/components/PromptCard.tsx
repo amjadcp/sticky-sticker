@@ -27,23 +27,37 @@ export const PromptCard: React.FC<PromptCardProps> = ({ prompt }) => {
       to={`/prompt/${prompt.slug}`}
       className="group block relative rounded-[18px] overflow-hidden bg-softGray border border-border-subtle shadow-subtle hover:shadow-elevated transition-all duration-300 transform focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-primary"
     >
-      <div className={`relative w-full h-full ${
-        prompt.aspectRatio === 'tall' ? 'aspect-[3/4]' : prompt.aspectRatio === 'square' ? 'aspect-square' : 'aspect-[4/5]'
+      <div className={`relative w-full h-full bg-slate-950 flex items-center justify-center overflow-hidden ${
+        prompt.aspectRatio === 'square' ? 'aspect-square' : 'aspect-[2/3]'
       }`}>
         
-        {/* Skeleton Loader */}
+        {/* Loading Animation Overlay */}
         {!imageLoaded && (
-          <div className="absolute inset-0 bg-softGray animate-pulse flex items-center justify-center">
-            <Sparkles className="w-6 h-6 text-ink-muted/30" />
+          <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-md flex flex-col items-center justify-center gap-2 z-10 transition-opacity duration-300">
+            <div className="relative flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full border-2 border-indigo-500/20 border-t-indigo-500 animate-spin" />
+              <Sparkles className="w-4 h-4 text-indigo-400 animate-pulse absolute" />
+            </div>
+            <span className="text-[10px] font-semibold text-slate-300 tracking-wider uppercase animate-pulse">
+              Loading...
+            </span>
           </div>
         )}
 
-        {/* Image */}
+        {/* Ambient Blur Layer for zero-cut card container */}
+        <img
+          src={prompt.coverImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
+        />
+
+        {/* Full Uncut Cover Image */}
         <img
           src={prompt.coverImage}
           alt={prompt.title}
           onLoad={() => setImageLoaded(true)}
-          className={`w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03] ${
+          className={`relative z-0 w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03] ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"

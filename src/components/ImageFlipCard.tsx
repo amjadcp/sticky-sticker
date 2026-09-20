@@ -17,6 +17,8 @@ export const ImageFlipCard: React.FC<ImageFlipCardProps> = ({
   onFlipToggle,
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [frontLoaded, setFrontLoaded] = useState(false);
+  const [backLoaded, setBackLoaded] = useState(false);
 
   const handleFlip = () => {
     const nextFlipped = !isFlipped;
@@ -43,13 +45,38 @@ export const ImageFlipCard: React.FC<ImageFlipCardProps> = ({
         >
           {/* FRONT SIDE: Generated AI Result */}
           <div
-            className="w-full rounded-2xl overflow-hidden bg-softGray border border-border-subtle shadow-elevated relative"
+            className="w-full aspect-[2/3] rounded-2xl overflow-hidden bg-slate-950 border border-border-subtle shadow-elevated relative flex items-center justify-center"
             style={{ backfaceVisibility: 'hidden' }}
           >
+            {/* Front Loading Animation Overlay */}
+            {!frontLoaded && (
+              <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-md flex flex-col items-center justify-center gap-3 z-20 transition-opacity duration-300">
+                <div className="relative flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border-2 border-indigo-500/20 border-t-indigo-500 animate-spin" />
+                  <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse absolute" />
+                </div>
+                <span className="text-xs font-semibold text-slate-300 tracking-wide font-sans animate-pulse">
+                  Loading AI Result...
+                </span>
+              </div>
+            )}
+
+            {/* Ambient Ambient Blur Layer for visual depth */}
+            <img
+              src={resultImage}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-35 scale-110 pointer-events-none"
+            />
+
+            {/* AI Result Image - Full Uncut Display */}
             <img
               src={resultImage}
               alt={`${altText} - AI Result`}
-              className="w-full h-auto object-cover max-h-[560px] min-h-[320px] w-full block"
+              onLoad={() => setFrontLoaded(true)}
+              className={`relative z-0 w-full h-full object-contain block transition-opacity duration-300 ${
+                frontLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
             />
 
             {/* Front Top Overlay Bar (No Collision / Flex Container) */}
@@ -74,7 +101,7 @@ export const ImageFlipCard: React.FC<ImageFlipCardProps> = ({
             </div>
 
             {/* Bottom Floating Hint Overlay */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 max-w-[90%] bg-black/75 backdrop-blur-md text-white/90 text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 max-w-[90%] bg-black/75 backdrop-blur-md text-white/90 text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center gap-1.5 shadow-sm whitespace-nowrap z-10">
               <Eye className="w-3.5 h-3.5 text-yellow-400 shrink-0" />
               <span className="truncate">Click image to flip card</span>
             </div>
@@ -82,16 +109,41 @@ export const ImageFlipCard: React.FC<ImageFlipCardProps> = ({
 
           {/* BACK SIDE: Original Reference Photo */}
           <div
-            className="w-full rounded-2xl overflow-hidden bg-slate-900 border border-border-subtle shadow-elevated absolute inset-0"
+            className="w-full aspect-[2/3] rounded-2xl overflow-hidden bg-slate-950 border border-border-subtle shadow-elevated absolute inset-0 flex items-center justify-center"
             style={{
               backfaceVisibility: 'hidden',
               transform: 'rotateY(180deg)',
             }}
           >
+            {/* Back Loading Animation Overlay */}
+            {!backLoaded && (
+              <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-md flex flex-col items-center justify-center gap-3 z-20 transition-opacity duration-300">
+                <div className="relative flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border-2 border-indigo-500/20 border-t-indigo-500 animate-spin" />
+                  <Camera className="w-5 h-5 text-indigo-400 animate-pulse absolute" />
+                </div>
+                <span className="text-xs font-semibold text-slate-300 tracking-wide font-sans animate-pulse">
+                  Loading Reference...
+                </span>
+              </div>
+            )}
+
+            {/* Ambient Ambient Blur Layer for visual depth */}
+            <img
+              src={referenceImage}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-35 scale-110 pointer-events-none"
+            />
+
+            {/* Reference Image - Full Uncut Display */}
             <img
               src={referenceImage}
               alt={`${altText} - Original Reference`}
-              className="w-full h-full object-cover max-h-[560px] min-h-[320px] w-full block"
+              onLoad={() => setBackLoaded(true)}
+              className={`relative z-0 w-full h-full object-contain block transition-opacity duration-300 ${
+                backLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
             />
 
             {/* Back Top Overlay Bar (No Collision / Flex Container) */}
@@ -116,7 +168,7 @@ export const ImageFlipCard: React.FC<ImageFlipCardProps> = ({
             </div>
 
             {/* Bottom Floating Hint Overlay */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 max-w-[90%] bg-black/80 backdrop-blur-md text-white/90 text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 pointer-events-none flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 max-w-[90%] bg-black/80 backdrop-blur-md text-white/90 text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 pointer-events-none flex items-center gap-1.5 shadow-sm whitespace-nowrap z-10">
               <Camera className="w-3.5 h-3.5 text-indigo-300 shrink-0" />
               <span className="truncate">Uploaded reference photo</span>
             </div>

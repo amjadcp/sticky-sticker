@@ -11,7 +11,9 @@ export type Category =
   | 'Couple'
   | 'Family'
   | 'Gaming-Inspired'
-  | 'Retro';
+  | 'Retro'
+  | '3D Character'
+  | 'Clay';
 
 export interface ImageVariant {
   id?: string;

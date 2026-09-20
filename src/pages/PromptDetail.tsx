@@ -123,16 +123,17 @@ export const PromptDetail: React.FC = () => {
                           setSelectedImageIndex(idx);
                           trackEvent('reference_view', { prompt_id: prompt.id, image_index: idx });
                         }}
-                        className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 focus:outline-none ${
+                        className={`relative w-16 sm:w-20 aspect-[2/3] rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 focus:outline-none bg-slate-950 flex items-center justify-center ${
                           selectedImageIndex === idx
-                            ? 'border-indigo-primary ring-2 ring-indigo-primary/20 scale-105'
+                            ? 'border-indigo-primary ring-2 ring-indigo-primary/20 scale-105 opacity-100'
                             : 'border-border-subtle opacity-75 hover:opacity-100'
                         }`}
                         title={variant.label || `Sticker Variant ${idx + 1}`}
                       >
-                        <img src={variant.resultImage} alt={`Variant ${idx + 1}`} className="w-full h-full object-cover" />
+                        <img src={variant.resultImage} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover blur-md opacity-30 scale-110 pointer-events-none" />
+                        <img src={variant.resultImage} alt={`Variant ${idx + 1}`} className="relative z-0 w-full h-full object-contain" />
                         {selectedImageIndex === idx && (
-                          <div className="absolute inset-0 bg-indigo-primary/10 border border-indigo-primary rounded-xl" />
+                          <div className="absolute inset-0 bg-indigo-primary/10 border border-indigo-primary rounded-xl z-10 pointer-events-none" />
                         )}
                       </button>
                     ))}

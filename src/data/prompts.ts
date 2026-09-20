@@ -1,256 +1,176 @@
 import { PromptItem } from '../types/prompt';
 
-export const PROMPTS: PromptItem[] = [
+export const PROMPTS: PromptItem[] =[
   {
-    id: 'prompt-001',
-    slug: 'handcrafted-clay-portrait',
-    title: 'Handcrafted Clay Stop-Motion Portrait',
-    category: 'Clay & 3D',
-    coverImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1000&q=80',
+    "id": "prompt-3d-urban-toy-transformation",
+    "slug": "3d-urban-toy-transformation",
+    "title": "3D Urban Toy Transformation",
+    "category": "3D Character",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/variant-2-result.png"
     ],
-    variants: [
+    "variants": [
       {
-        id: 'var-1',
-        resultImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=80',
-        referenceImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80',
-        label: 'Vibrant Magenta Clay'
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/variant-1-result.png"
       },
       {
-        id: 'var-2',
-        resultImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
-        referenceImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80',
-        label: 'Fluid 3D Sculpt'
-      },
-      {
-        id: 'var-3',
-        resultImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1000&q=80',
-        referenceImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=80',
-        label: 'Studio Clay Figure'
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/3D%20Urban%20Toy%20Transformation/variant-2-result.png"
       }
     ],
-    promptText: 'A detailed 3D claymation stop-motion figure based on the subject in the attached photo. Crafted from tactile polymer clay with visible subtle fingerprint textures, warm studio lighting, soft depth of field, miniature set background with handcrafted props, cute expression, vibrant palette, Aardman and Laika animation aesthetic style, high resolution rendering.',
-    supportedTool: 'Gemini',
-    transformationType: 'Photo Transformation',
-    isPremium: true,
-    tags: ['clay', 'claymation', 'stop-motion', '3d', 'handcrafted', 'portrait'],
-    published: true,
-    sortOrder: 1,
-    description: 'Transform your favorite personal photos into tactile, handcrafted stop-motion clay figurines with rich texture and studio lighting.',
-    aspectRatio: 'portrait',
+    "promptText": "Transform the person in the reference photo into a high-quality 3D urban animated character; make it as close to the real face as possible, Stylized yet semi-realistic proportions, slightly large head and hands, smooth and detailed skin, confident pose (fill in as you like). Wearing a hoodie (fill in as you like), pants (fill in as you like), and shoes (fill in as you like), wearing cool sunglasses, a neat haircut like in the reference photo. White studio 4x6 background, soft cinematic lighting, sharp focus, Pixar-style realism combined with urban designer toy aesthetics, highly detailed, 4K rendering, professional character design.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "3d character"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
   },
   {
-    id: 'prompt-002',
-    slug: 'open-world-crime-poster',
-    title: 'Open-World Crime Action Poster',
-    category: 'Cinematic',
-    coverImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
+    "id": "prompt-gta-theme",
+    "slug": "gta-theme",
+    "title": "GTA Theme",
+    "category": "3D Character",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-2-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-3-result.png"
     ],
-    promptText: 'Recreate the person in the reference image as an iconic open-world action video game box cover character. Sun-drenched coastal palm trees background, retro-inspired vibrant pastel magenta and cyan sunset gradient sky, stylized vector art painting, dramatic lighting, bold title placement space, high contrast action poster style.',
-    supportedTool: 'Gemini',
-    transformationType: 'Character Poster',
-    isPremium: false,
-    tags: ['cinematic', 'action', 'retro', 'poster', 'gaming', 'vector'],
-    published: true,
-    sortOrder: 2,
-    description: 'Turn yourself into an action poster hero framed against vibrant coastal sunsets and bold cinematic colors.',
-    aspectRatio: 'tall',
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-2-result.png"
+      },
+      {
+        "id": "var-3",
+        "label": "Variant 3",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-3-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/GTA%20Theme/variant-3-result.png"
+      }
+    ],
+    "promptText": "Convert the scene into a premium 3D-informed digital painting. Preserve the exact pose, identity, clothing structure, scene content, background layout, horizon, object placement, and spatial arrangement. Use hyper-detailed hand-painted foreground rendering and a simplified but readable painted 4x6 background.\r\n\r\nCHARACTER:\r\nPreserve identity, pose, and outfit structure exactly. Render believable anatomy, volume, folds, seams, and dense surface detail. Build faces with connected shadows, broad midtones, and large sharply defined highlights. Use clear painted planes. Render visible hair, facial hair, brows, lashes, and flyaways strand by strand with tapered root-to-tip strokes.\r\n\r\nENVIRONMENT:\r\nUse a luminous Vice City sunset gradient from dusty periwinkle and muted sky blue through lavender and mauve into warm peach, coral, apricot, and pale orange. Keep clouds faint. Add large muted plum, dusty violet, and mauve palm silhouettes. Preserve the existing environment layout. Render buildings, rooflines, facade divisions, window bands, signage hints, palm fronds, streets, and skyline as faint simplified pastel illustrations with softened edges, pale grouped tones, compressed contrast, low saturation, low texture density, and reduced detail. Keep forms readable but visibly flatter, lighter, less modeled, and less defined than the foreground.\r\n\r\nRENDER PIPELINE:\r\nUse sculpted 3D-informed form with visible separated directional brush strokes, large planar value blocks, crisp hard-soft edge control, and distinct painted shape groups. Keep the foreground handmade, precise, and not smoothly blended, with clean plane breaks, crisp accent edges, and minimal texture noise. Use zero outline layer. Foreground subjects and objects must meet the background directly in their true local surface colors with natural antialiasing.\r\nApply exaggerated warm highlights as large burned pure glowing-white painted planes across every light-facing area of faces, hair, hands, clothing, and objects. Apply an equally broad blue to blue-violet opposing light across every opposite-facing plane as a real secondary light source, not shadow or rim light. Keep both light families large, clean, sharply defined, and present across full forms, not only edges.\r\nPaint skin, hair, fabric, metal, glass, and hard surfaces with grouped shadow masses, broad midtones, crisp planar shifts, pure-white highlight planes, broad blue-light planes, and visible separated brush marks.\r\n\r\nCOLOR & LIGHTING:\r\nUse peach, coral, apricot, pale gold, muted cyan, periwinkle, blue-violet, and lavender. Keep the foreground detailed and dimensional. Keep the background luminous, faint, pale, softly flattened, lower-contrast, less saturated, and clearly subordinate to the foreground.\r\n\r\nMATERIALS & TEXTURES:\r\nRender individually tapered hair strands, separated facial hair, modeled skin planes, pores, stubble, crisp folds, seams, thread details, metal reflections, and glass highlights. Keep textures non-photographic but highly dimensional.\r\n\r\nDETAILS:\r\nTypeset the plain stacked words 'grand theft auto' at the top center in thick rounded geometric lowercase block letters. Use solid flat white lettering only, not a logo treatment. Add only a subtle soft white glow close to the letters. The letters themselves and their subtle white glow are the only altered pixels; everything immediately outside them remains the original background. Apply no shadow, border, stroke, outline, bevel, depth, offset copy, duplicate layer, or other external styling.\r\nAdd a medium-sized white-outlined 'VI' at the lower-bottom center. Use thin geometric linework, no fill, gradient, bevel, or texture. Draw the V with two straight diagonals meeting at a sharp acute bottom point. Add only a clear soft white glow.\r\nPlace only a small Rockstar logo in the bottom-right. Do not add PS5 or Xbox logos. Add no HUD clutter.\r\n\r\nSTYLE EXCLUSIONS:\r\nReject photorealism, live-action realism, halftone, muddy or loose painting, sketchiness, generic poster filters, plastic skin, smooth blended faces, simplified hair masses, weak midtones, timid highlights, thin rim lighting, uniform detail, black foreground outlines, filled or gradient VI marks, colored VI glow, and VI drop shadows.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "3d character"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
   },
   {
-    id: 'prompt-003',
-    slug: 'anime-inspired-sky-warrior',
-    title: 'Anime-Inspired Sky Warrior',
-    category: 'Anime-Inspired',
-    coverImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80',
+    "id": "prompt-viral-elastic-3d-cartoon-character",
+    "slug": "viral-elastic-3d-cartoon-character",
+    "title": "Viral Elastic 3D Cartoon Character",
+    "category": "3D Character",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-2-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-3-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-4-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-5-result.png"
     ],
-    promptText: 'Convert the subject of the uploaded photograph into a Japanese anime movie style portrait. Luminous hand-painted background featuring painterly cumulus clouds and golden-hour sunset, delicate line work, cell-shading with rich atmospheric haze, emotive eyes matching the subject, Studio Ghibli inspired cinematic warmth, 4k detail.',
-    supportedTool: 'Gemini',
-    transformationType: 'Anime Stylization',
-    isPremium: true,
-    tags: ['anime', 'ghibli-style', 'cel-shaded', 'sky', 'clouds', 'portrait'],
-    published: true,
-    sortOrder: 3,
-    description: 'Bring your photos into an enchanting hand-painted anime sky world with painterly clouds and cinematic lighting.',
-    aspectRatio: 'square',
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-2-result.png"
+      },
+      {
+        "id": "var-3",
+        "label": "Variant 3",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-3-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-3-result.png"
+      },
+      {
+        "id": "var-4",
+        "label": "Variant 4",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-4-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-4-result.png"
+      },
+      {
+        "id": "var-5",
+        "label": "Variant 5",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-5-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Viral%20Elastic%203D%20Cartoon%20Character/variant-5-result.png"
+      }
+    ],
+    "promptText": "Convert the subject in this image into a 4x6 hyper-stylized viral 3D cartoon character in stylized 3D CGI, with full freedom to rebuild the pose, environment, and body while preserving the subject’s recognizable identity and facial expression. Use a playful motion-driven render language built from squash-and-stretch, glossy elastic forms, and clean animated readability.\r\n\r\nCHARACTER:\r\nThe subject becomes a full-body action character with a tall, bendable body proportions, elongated arms and legs, and soft deforming limbs that snap back with springy energy. The existing hair is reimagined as elastic, flowing strands that follow the motion while preserving the subject’s original hair state and overall silhouette. Clothing and accessories are simplified into flexible cartoon forms that wrap the body cleanly, with exaggerated proportions that stay instantly readable and expressive.\r\n\r\nFACE & ANATOMY:\r\nKeep the face highly legible with large expressive eyes, defined brows, and a clear mouth shape that carries the subject’s identity through the stylized render. The head reads slightly oversized against the body, with rounded cheeks, simplified jaw structure, and smooth facial planes that support strong emotion without losing likeness. Hands and feet are stylized into clear, compact cartoon forms with bold gesture language and no realistic microdetail.\r\n\r\nENVIRONMENT:\r\nRebuild the scene as a whimsical elastic world with bouncy ground forms, floating playful objects, and curved spatial elements that echo the subject’s stretchable anatomy. Stage the composition to support a dynamic diagonal pose and strong foreground-to-background depth, with the environment acting as a fun visual amplifier rather than a dominant subject. Keep the world bright, exaggerated, and motion-friendly, with clear separation between the character and the background.\r\n\r\nRENDER PIPELINE:\r\nUse a high-end stylized 3D CGI pipeline with ultra-clean topology, soft-body deformation logic, and toon-friendly sculpted forms that preserve crisp readability in every pose. Apply stylized PBR elastic materials with controlled subsurface diffusion, clean edge response, and polished shader transitions that read as native cartoon rendering rather than realism. Finish with crisp compositing, smooth depth layering, and animation-grade form clarity that keeps the subject iconic at any scale.\r\n\r\nCOLOR & LIGHT:\r\nUse a vibrant candy-bright palette with energetic saturation, playful contrast, and bold color separation between the character and the environment. Light the scene with soft rim light, luminous reflections, and controlled bloom that enhances the glossy deforming surfaces without flattening the form.\r\n\r\nMATERIALS & TEXTURES:\r\nMake the skin read as glossy taffy with smooth elastic highlights, soft rounded reflections, and flexible surface tension across every bend. Treat hair, cloth, accessories, and props as simplified stylized materials with clean cartoon sheen, soft translucency where needed, and no realistic fabric weave or skin detail.\r\n\r\nDETAILS:\r\nEmphasize motion through squash-and-stretch arcs, springy limb poses, and playful deformation cues that make the character feel alive and viral-ready. Add subtle reflective pops, smooth motion-friendly gradients, and clean stylized shadow shapes that reinforce the sculpted cartoon finish. Keep all secondary details integrated into the form language, never cluttered or realistic.\r\n\r\nSTYLE EXCLUSIONS:\r\nReject photorealism, live-action realism, generic anime, flat vector art, painterly brushwork, and toy-like hard plastic rendering. Do not use realistic skin pores, DSLR optics, or documentary camera treatment.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "3d character"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
   },
   {
-    id: 'prompt-004',
-    slug: 'retro-comic-hero',
-    title: 'Retro Comic Book Hero',
-    category: 'Comic',
-    coverImage: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1000&q=80',
+    "id": "prompt-handcrafted-clay-theme",
+    "slug": "handcrafted-clay-theme",
+    "title": "Handcrafted Clay Theme",
+    "category": "Clay",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/variant-2-result.png"
     ],
-    promptText: 'Illustrate the person in the reference photo in classic 1970s vintage comic book art style. Heavy black ink outlines, Ben-Day dot halftones, aged yellowed newsprint paper texture, dynamic action pose, primary pop colors (yellow, red, cyan), heroic expressive face, retro pop art graphic novel aesthetic.',
-    supportedTool: 'Gemini',
-    transformationType: 'Pop-Art Comic',
-    isPremium: false,
-    tags: ['comic', 'vintage', 'halftone', 'pop-art', 'retro', 'hero'],
-    published: true,
-    sortOrder: 4,
-    description: 'Step into a classic 70s vintage graphic novel complete with authentic halftone dot patterns and bold ink lines.',
-    aspectRatio: 'portrait',
-  },
-  {
-    id: 'prompt-005',
-    slug: 'neon-cyberpunk-wanderer',
-    title: 'Neon Cyberpunk Wanderer',
-    category: 'Cinematic',
-    coverImage: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1000&q=80',
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Clay/Handcrafted%20Clay%20Theme/variant-2-result.png"
+      }
     ],
-    promptText: 'Transform the face in the reference photo into a futuristic cyberpunk character standing in a rain-slicked city alleyway. Glowing neon signs in magenta, violet, and electric blue reflecting off wet pavement, volumetric fog, futuristic jacket with illuminated collar detailing, dramatic rim lighting, cinematic 35mm lens rendering.',
-    supportedTool: 'Gemini',
-    transformationType: 'Sci-Fi Portrait',
-    isPremium: false,
-    tags: ['cyberpunk', 'neon', 'cinematic', 'futuristic', 'sci-fi', 'portrait'],
-    published: true,
-    sortOrder: 5,
-    description: 'Immerse yourself in a rain-soaked neon cyberpunk metropolis illuminated by vibrant violet and electric blue reflections.',
-    aspectRatio: 'tall',
-  },
-  {
-    id: 'prompt-006',
-    slug: 'vibrant-pop-art-portrait',
-    title: 'Vibrant Pop-Art Graphic Poster',
-    category: 'Poster',
-    coverImage: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1000&q=80',
+    "promptText": "Convert this image into a 4x6 handcrafted clay stop-motion animation set aesthetic while preserving the original composition exactly. Keep every object, prop, structure, sign, environmental element, and background detail identical in identity, quantity, position, and scale, and restyle the entire scene as a physically sculpted miniature film set. Every background surface, structure, and element must be fabricated from colored clay with hand-built miniature detailing.\r\n\r\nCHARACTER:\r\nRender the image as a clay-built stop-motion figure with the same recognizable identity, converted into hand-formed plasticine anatomy with rounded volumes, slightly uneven contours, and visible sculpting seams. Preserve the subject’s core facial identity, hair state, and facial hair pattern while translating all features into a tactile puppet-like construction with simplified clay planes and softly modeled expression logic.\r\n\r\nFACE & ANATOMY:\r\nShape the face with softened edges, compact facial forms, and handcrafted asymmetry that reads as sculpted rather than molded or painted. Keep body proportions and silhouette faithful to the source while giving limbs, hands, and joints the subtle thickness, rounded articulation, and physical presence of a stop-motion puppet.\r\n\r\nRENDER PIPELINE:\r\nUse a stop-motion 2D/3D hybrid miniature-set look with tangible clay construction, soft studio illumination, and frame-by-frame physical realism. Apply gentle contour softening, shallow macro depth feel, and delicate shadow falloff so the image reads as a photographed handcrafted animation frame, not a digital render.\r\n\r\nCOLOR & LIGHT:\r\nPreserve the original palette relationships while shifting all color into muted plasticine tones with waxy saturation and soft matte balance. Use miniature film lighting with a controlled key, subtle fill, and smooth shadow transitions that reinforce the small-scale physical set illusion.\r\n\r\nMATERIALS & TEXTURES:\r\nConvert every material into matte clay: skin, fabric, metal, glass, wood, stone, and plastic all become colored modeling clay with fingerprints, dents, pressed edges, and tiny hand-worked imperfections. Keep surfaces tactile and sculptural, with a faint stop-motion sheen and no photographic realism.\r\n\r\nDETAILS:\r\nPreserve all fine details as clay-carved equivalents, with textures, edges, labels, and small forms appearing pressed, incised, or shaped into the material rather than printed or digitally generated. Maintain exact scene fidelity while introducing only subtle handcrafted irregularities, miniature-set depth softness, and physical prop authenticity.\r\n\r\nSTYLE EXCLUSIONS:\r\nReject photorealism, live-action realism, digital CGI gloss, painterly rendering, and generic toy-like plastic finishes. Do not add, remove, replace, or redesign any scene element, and do not introduce new props, text, logos, watermarks, or lighting fixtures.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "clay"
     ],
-    promptText: 'A bold modern pop-art graphic poster based on the subject in the photo. High-contrast duotone color palette of cobalt blue and electric coral, crisp vector shapes, minimalist background with geometric typography layout space, iconic Andy Warhol meets Swiss graphic design movement, striking wall art aesthetic.',
-    supportedTool: 'Gemini',
-    transformationType: 'Graphic Poster',
-    isPremium: true,
-    tags: ['pop-art', 'poster', 'graphic-design', 'vector', 'minimal', 'vibrant'],
-    published: true,
-    sortOrder: 6,
-    description: 'Transform any photo into a bold, high-contrast Swiss-inspired pop art graphic masterpiece.',
-    aspectRatio: 'square',
-  },
-  {
-    id: 'prompt-007',
-    slug: 'charming-3d-chibi-figurine',
-    title: 'Charming 3D Chibi Toy Figurine',
-    category: 'Clay & 3D',
-    coverImage: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1000&q=80',
-    ],
-    promptText: 'Create a cute 3D stylized vinyl collectible toy figurine of the person in the image. Glossy smooth plastic finish, oversized cute eyes matching the subject, adorable proportion, standing on a clean pastel pedestal with studio lighting, octane render, Pixar and Funko-inspired character design.',
-    supportedTool: 'Gemini',
-    transformationType: '3D Character',
-    isPremium: false,
-    tags: ['3d', 'toy', 'vinyl-figure', 'chibi', 'cute', 'character'],
-    published: true,
-    sortOrder: 7,
-    description: 'Turn yourself or your pets into an adorable smooth vinyl 3D collectible toy figure.',
-    aspectRatio: 'portrait',
-  },
-  {
-    id: 'prompt-008',
-    slug: 'whimsical-watercolor-family',
-    title: 'Whimsical Watercolor Portrait',
-    category: 'Family',
-    coverImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
-    ],
-    promptText: 'Paint the subjects in the attached family/couple photo in a soft whimsical watercolor style. Fluid translucent pigment washes, soft deckled edge paper texture, pastel botanical florals frame, subtle pencil sketch under-drawing, heartwarming mood, delicate color bleeds and painterly splatters.',
-    supportedTool: 'Gemini',
-    transformationType: 'Watercolor Art',
-    isPremium: false,
-    tags: ['watercolor', 'family', 'painting', 'soft', 'whimsical', 'couple'],
-    published: true,
-    sortOrder: 8,
-    description: 'Capture family moments or couple portraits with delicate, fluid watercolor washes on textured paper.',
-    aspectRatio: 'tall',
-  },
-  {
-    id: 'prompt-009',
-    slug: 'mystical-fantasy-guardian',
-    title: 'Mystical Forest Fantasy Guardian',
-    category: 'Fantasy',
-    coverImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
-    ],
-    promptText: 'Re-imagine the person in the photo as an ethereal fantasy hero in an enchanted moonlit forest. Glowing bioluminescent flora, subtle golden magic particles floating in the air, ornate elven cloak detailing, mystical atmosphere, hyper-detailed digital oil painting by Greg Rutkowski aesthetic.',
-    supportedTool: 'Gemini',
-    transformationType: 'Fantasy Portrait',
-    isPremium: true,
-    tags: ['fantasy', 'mystical', 'magic', 'forest', 'digital-painting'],
-    published: true,
-    sortOrder: 9,
-    description: 'Transform into a glowing ethereal fantasy hero surrounded by bioluminescent flora and magical particles.',
-    aspectRatio: 'portrait',
-  },
-  {
-    id: 'prompt-010',
-    slug: 'retro-80s-synthwave-couple',
-    title: '80s Synthwave Neon Couple',
-    category: 'Couple',
-    coverImage: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
-    ],
-    promptText: 'Recreate the couple in the reference photo in a retro 1980s synthwave aesthetic. Chrome wireframe horizon grid, giant glowing pink wireframe grid sun in background, hot neon pink and cyan dual lighting, classic retro sunglasses, crisp vector aesthetic, chrome reflections, vaporwave music album cover style.',
-    supportedTool: 'Gemini',
-    transformationType: 'Retro Portrait',
-    isPremium: false,
-    tags: ['couple', 'synthwave', '80s', 'retro', 'neon', 'vaporwave'],
-    published: true,
-    sortOrder: 10,
-    description: 'Celebrate your connection with a nostalgia-packed 80s synthwave grid and glowing retro sun.',
-    aspectRatio: 'square',
-  },
-  {
-    id: 'prompt-011',
-    slug: 'pixel-art-gaming-hero',
-    title: 'Pixel Art Retro Gaming Hero',
-    category: 'Gaming-Inspired',
-    coverImage: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80',
-    ],
-    promptText: 'Convert the uploaded person photo into detailed 16-bit pixel art character sprite. Crisp pixel grid, vibrant retro arcade palette, charming idle animation pose framing, nostalgic 90s SNES RPG character portrait aesthetic, clean background grid pattern.',
-    supportedTool: 'Gemini',
-    transformationType: 'Pixel Art',
-    isPremium: false,
-    tags: ['pixel-art', 'gaming', '16-bit', 'retro', 'arcade', 'sprite'],
-    published: true,
-    sortOrder: 11,
-    description: 'Turn your photo into a crisp 16-bit pixel art sprite reminiscent of classic 90s video game icons.',
-    aspectRatio: 'square',
-  },
-  {
-    id: 'prompt-012',
-    slug: 'vintage-double-exposure-effect',
-    title: 'Vintage Double Exposure Effect',
-    category: 'Photo Effects',
-    coverImage: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1000&q=80',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1000&q=80',
-    ],
-    promptText: 'Apply a sophisticated artistic double exposure effect onto the subject profile photo. Blend the silhouette of the face smoothly with mist-covered pine forest mountains and flying birds. Monochrome dark film tone with warm sepia highlights, moody analog photography feel, high contrast artistic composition.',
-    supportedTool: 'Gemini',
-    transformationType: 'Double Exposure',
-    isPremium: true,
-    tags: ['photo-effects', 'double-exposure', 'monochrome', 'nature', 'artistic'],
-    published: true,
-    sortOrder: 12,
-    description: 'Seamlessly blend your silhouette with foggy mountain pine forests in a striking analog double exposure effect.',
-    aspectRatio: 'portrait',
-  },
-];
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
+  }
+]
