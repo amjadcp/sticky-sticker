@@ -38,6 +38,42 @@ export const PROMPTS: PromptItem[] =[
     "aspectRatio": "portrait"
   },
   {
+    "id": "prompt-free-floating-3d-cartoon-head",
+    "slug": "free-floating-3d-cartoon-head",
+    "title": "Free Floating 3D Cartoon Head",
+    "category": "3D Character",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/variant-2-result.png"
+    ],
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/3D%20Character/Free%20Floating%203D%20Cartoon%20Head/variant-2-result.png"
+      }
+    ],
+    "promptText": "Transform the input 'portrait' into a 3:4 single floating stylized 3D CGI 'caricature head' with no neck and no shoulders, centered, floating, isolated, and scaled to fill the frame in a 4x6 canvas. Preserve the subject’s unmistakable identity by maintaining the exact hairline, scars, facial hair pattern (if present), eye shape, ear structure, tooth spacing, and expression, while pushing the form into a bold caricature with strong stylized exaggeration. The likeness must remain instantly recognizable.\r\n\r\nCHARACTER:\r\nReimagine the subject as a glossy, floating caricature head with integrated thug-inspired accessories. Include a reflective 'gold' tooth, a small hoop earring, a low-crown fitted cap, and a subtle temple tattoo. Introduce a playful twist by adding a very small number of clean, stylized stickers placed tastefully on the cap and slightly on the face (e.g., tiny smiley face, mini lightning bolt, or simple graphic icon). Stickers should feel like premium vinyl decals with slight gloss and edge lift, enhancing personality without cluttering or covering key facial features.\r\n\r\nFACE & ANATOMY:\r\nApply caricature exaggeration, while preserving correct facial feature placement. Eyes should be glossy with simplified geometry and lively reflections. Eyebrows remain crisp sculpted shapes. The mouth is slightly open with a clean and stylized design, with high-contrast enamel and a prominent reflective gold tooth. Maintain a sharp and readable silhouette from jaw to skull.\r\n\r\nBACKGROUND:\r\nReplace the original background with a drastically bright and cheerful candy-sky 3d environment. Create a luminous pastel sky filled with soft, fluffy, rounded clouds in shades of 'pink', peach, baby blue, and creamy lavender. Introduce floating abstract shapes like soft spheres, subtle confetti specks, and gentle light flares to enhance a playful, uplifting atmosphere. Keep everything bright, airy, and saturated with joy—no dark tones. Arrange elements in layered depth behind the head, with slight atmospheric overlap that enhances depth without breaking the facial outline.\r\n\r\nRENDER PIPELINE:\r\nStylized 3D CGI. Sculpt the head with smooth designer-toy-like forms and clean edge transitions. Surfaces should feel polished and slightly exaggerated, with a glossy PBR-inspired shader that enhances color vibrancy and reflectivity. Avoid realism—focus on bold, graphic, and playful stylization.\r\n\r\nMATERIALS & TEXTURES:\r\nSkin should be smooth and slightly plasticized with a soft satin gloss, no pores. Hair appears as sculpted glossy clumps with soft highlight ridges. Metallic elements (gold tooth, earring) are reflective and clean. The cap has minimal fabric texture with a polished stylized finish. Stickers should appear as thin glossy decals with slight specular highlights and subtle edge definition. The temple tattoo remains faint and graphic.\r\n\r\nDETAILS:\r\nAdd gentle bloom to the brightest highlights and soft glow to background elements. Include a subtle rim shadow where clouds approach the head for depth. Apply minimal grain for cohesion. Keep the final image clean, vibrant, and joyfully polished.\r\n\r\nSTYLE EXCLUSIONS:\r\nExclude photorealism, skin pores, realistic photography, gritty textures, dark or moody lighting, flat vector styles, halftone effects, and hyper-real rendering. Maintain a stylized glossy 3D CGI caricature aesthetic with a bright and cheerful tone.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "3d character"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
+  },
+  {
     "id": "prompt-gta-theme",
     "slug": "gta-theme",
     "title": "GTA Theme",
@@ -138,6 +174,92 @@ export const PROMPTS: PromptItem[] =[
     "aspectRatio": "portrait"
   },
   {
+    "id": "prompt-bold-stylized-cartoon-portrait",
+    "slug": "bold-stylized-cartoon-portrait",
+    "title": "Bold Stylized Cartoon Portrait",
+    "category": "Cartoon",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-2-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-3-result.png"
+    ],
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-2-result.png"
+      },
+      {
+        "id": "var-3",
+        "label": "Variant 3",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-3-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Bold%20Stylized%20Cartoon%20Portrait/variant-3-result.png"
+      }
+    ],
+    "promptText": "Convert the subject in this image into a 4x6 bold cartoon-effect illustration built on polished comic-adjacent 2D rendering, with disciplined contour hierarchy, slightly enlarged proportions, saturated high-clarity color blocking, and crisp cel-shaped shadow design. Use your creative freedom to enrich the surroundings with energetic cartoon staging, but keep the scene restrained, readable, and supportive while preserving the subject’s recognizable identity.\r\n\r\nCHARACTER:\r\nRender the subject as a high-clarity cartoon figure with strong contour emphasis, simplified anatomy, and a clean silhouette that reads instantly at a glance. Keep the subject’s core facial identity intact while translating features into animated forms: crisp brows, simplified nose structure, defined mouth shapes, and expressive eyes with clear tonal hierarchy. Preserve the subject’s existing hair, then integrate them into the cartoon design with tidy grouped shapes, graphic separation, and controlled line economy. Build the body with slightly compact proportions, confident upright stance language, and exaggerated readability in the limbs and gestures, without making the figure feel chibi or compressed.\r\n\r\nFACE & ANATOMY:\r\nUse stylized facial construction with smooth planes, deliberate feature spacing, and lively expression logic instead of realistic microdetail. Keep the head-to-body ratio mildly enlarged, the hands clear and readable, and the limbs simplified into strong animated forms with clean rhythm. Maintain recognizable likeness through native cartoon re-drawing, not face replacement.\r\n\r\nENVIRONMENT:\r\nRestyle the scene into a lively cartoon world with bold sweeping shapes, simplified depth layers, and a clean background design that supports motion and clarity. Enrich the setting with visual energy, graphic spatial separation, and animation-ready staging that frames the subject without clutter, using broad,  readable masses and restrained background detail rather than dense invention.\r\n\r\nRENDER PIPELINE: \r\nUse polished 2D cartoon rendering with assertive linework, clear outer-contour priority, semi-flat cel shading, and crisp shadow cutoffs that create a punchy animated finish. Keep edges controlled, shapes readable, and composition built for fast visual impact rather than realism. The render should feel like a finished cartoon frame with strong ink discipline, selective interior accents, and a clear design hierarchy.\r\n\r\nCOLOR & LIGHT:\r\nApply a saturated palette with bright high-key contrast, cool environmental dominance, restrained warm skin accents, and clean shadow color separation. Lighting should be graphic and directional, with bright accent values and subtle edge brightness that amplify the subject’s energy and preserve silhouette clarity without becoming cinematic or harsh.\r\n\r\nMATERIALS & TEXTURES:\r\nTreat skin, hair, fabric, and surfaces as smooth cartoon materials with virtually no texture noise and very clean tonal transitions. Use simplified surface behavior, grouped tonal masses, and flat-to-clean semi-flat finishes, not photographic grain or realistic pores.\r\n\r\nDETAILS:\r\nAdd animation-native finishing cues such as decisive outline weight variation, tidy color segmentation, sparse structural interior strokes, and clean shape accents that strengthen the cartoon read. Keep every detail structural and style-led, with no decorative excess or over-rendered micro-detail.\r\n\r\nSTYLE EXCLUSIONS:\r\nReject photorealism, live-action realism, realistic skin texture, cinematic camera treatment, gritty comic textures, painterly realism, generic flat icon art, and heavy 3D toy-like rendering.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "cartoon"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
+  },
+  {
+    "id": "prompt-lacquer-pop-cartoon-portrait",
+    "slug": "lacquer-pop-cartoon-portrait",
+    "title": "Lacquer Pop Cartoon Portrait",
+    "category": "Cartoon",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-2-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-3-result.png"
+    ],
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-2-result.png"
+      },
+      {
+        "id": "var-3",
+        "label": "Variant 3",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-3-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Cartoon/Lacquer%20Pop%20Cartoon%20Portrait/variant-3-result.png"
+      }
+    ],
+    "promptText": "Convert the subject in the source image into a 4x6 lacquer pop cartoon-poster illustration rendered in polished high-energy 2D graphic style, with bold contour hierarchy, slightly inflated playful proportions, glossy saturated color blocking, and crisp cel-shaped shadow design. Preserve the subject’s recognizable identity clearly while transforming the full image into a cheerful lacquer-finish cartoon scene with rounded shape language, commercial pop clarity, and ultra-clean visual punch.\r\n\r\nCHARACTER:\r\nRender the subject as a high-clarity lacquer-pop cartoon figure with strong silhouette emphasis, simplified anatomy, and a clean shape that reads instantly at a glance. Keep the subject’s core facial identity intact while translating features into playful animated forms: expressive brows, simplified nose structure, tidy mouth shapes, and bright lively eyes with clear tonal hierarchy. Preserve the subject’s existing hair, then reinterpret it as grouped, polished shapes with graphic separation, rounded shape flow, and controlled line economy. Build the body with slightly compact, buoyant proportions, confident upright posture, and highly readable limbs and gestures, while avoiding chibi distortion or excessive exaggeration.\r\n\r\nFACE & ANATOMY:\r\nUse stylized facial construction with smooth simplified planes, deliberate feature spacing, and upbeat expression logic instead of realistic microdetail. Keep the head-to-body ratio mildly enlarged for poster appeal, the hands clear and readable, and the limbs simplified into strong animated forms with friendly rhythmic flow. Maintain recognizable likeness through native cartoon redrawing only, never through face replacement, realism, or generic mascot treatment.\r\n\r\nENVIRONMENT:\r\nRestyle the surroundings into a playful lacquer-pop poster world with colorful colors, rounded support shapes, simplified depth layers, bold framing elements, and cheerful background staging that energizes the subject without cluttering the scene. Preserve the original scene layout and subject placement, but rebuild the environment as a clean commercial-style backdrop using inflated forms, glossy accent shapes, curved separations, and restrained decorative motifs. Keep the setting readable and supportive, using broad colorful masses rather than dense invention.\r\n\r\nRENDER PIPELINE:\r\nUse polished 2D pop-cartoon rendering with assertive linework, strong outer-contour priority, semi-flat cel shading, crisp shadow cutoffs, and selective lacquer-like highlight accents that create a finished premium poster effect. Keep edges controlled, shapes readable, and the composition optimized for fast visual impact. The final image should feel like a premium collectible character poster or glossy commercial graphic, with disciplined line hierarchy, sparse interior accents, and clean design structure.\r\n\r\nCOLOR & LIGHT:\r\nApply a candy-bright palette with saturated coral, peach, aqua blue, mint green, bubblegum pink, lemon yellow, and controlled warm skin notes balanced by crisp cool support tones. Use high-key graphic lighting with bright clean highlights, punchy value contrast, and tidy shadow-color separation that amplifies charm and preserves silhouette clarity. Let the highlights feel smooth and polished, but keep the light graphic, fresh, and controlled rather than cinematic or harsh.\r\n\r\nMATERIALS & TEXTURES:\r\nTreat skin, hair, clothing, and scene surfaces as smooth lacquered cartoon materials with virtually no texture noise and very clean tonal transitions. Use grouped tonal masses, glossy-but-simple finish behavior, and flat-to-semi-flat polish rather than photographic grain, pores, fabric realism, or gritty texture overlays. Every material should feel clean, cheerful, polished, and commercially stylized.\r\n\r\nDETAILS:\r\nAdd lacquer-pop finishing cues such as decisive outline weight variation, clean color segmentation, sparse structural interior strokes, rounded accent shapes, subtle reflective pops, and tidy decorative echoes that strengthen the playful poster read. Let every detail support readability, charm, and graphic cohesion. Avoid clutter, gritty textures, and over-rendered micro-detail.\r\n\r\nSTYLE EXCLUSIONS:\r\nReject photorealism, realistic skin texture, cinematic lens treatment, gritty comic textures, painterly realism, flat icon minimalism, distressed print grunge, and heavy 3D toy-like rendering. Avoid stained-glass segmentation, noir carving textures, ancient mural roughness, and chaotic maximalism. Keep the result glossy, bubbly, graphic, and unmistakably lacquer-pop cartoon inspired.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "cartoon"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
+  },
+  {
     "id": "prompt-handcrafted-clay-theme",
     "slug": "handcrafted-clay-theme",
     "title": "Handcrafted Clay Theme",
@@ -167,6 +289,99 @@ export const PROMPTS: PromptItem[] =[
     "isPremium": false,
     "tags": [
       "clay"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
+  },
+  {
+    "id": "prompt-free-gritty-noir-comic-panel",
+    "slug": "free-gritty-noir-comic-panel",
+    "title": "Free Gritty Noir Comic Panel",
+    "category": "Comic",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-2-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-3-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-4-result.png"
+    ],
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-2-result.png"
+      },
+      {
+        "id": "var-3",
+        "label": "Variant 3",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-3-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-3-result.png"
+      },
+      {
+        "id": "var-4",
+        "label": "Variant 4",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-4-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Free%20Gritty%20Noir%20Comic%20Panel/variant-4-result.png"
+      }
+    ],
+    "promptText": "Convert this image into a 3x4 gritty alleyway comic-cartoon storyboard panel in a comic-print 2D medium, using tilted low-angle cinematic framing, storyboard ink panels, and identity-preserving facial features and pose; preserve the subject's face and primary clothing silhouette while allowing background and lighting to be restyled for gritty noir mood.\r\n\r\nCHARACTER:\r\nRestyle the subject into a bold inked comic protagonist: preserve facial likeness, clothing shapes, and key accessories while translating edges into confident brush-contour lines and torn-cloth silhouette accents. Render clothing with simplified hard folds, heavy contour weight on foreground edges, and intentional ink bleeds at panel borders to emphasize motion and grit.\r\n\r\nFACE & ANATOMY:\r\nUse comic-cartoon face logic: simplified planes, slightly angular jaw, pronounced brows, and high-contrast inked eye-sockets that maintain recognition. Keep head-to-shoulder ratio realistic but slightly compressed for cinematic tension; hands and fingers retain realistic scale but receive expressive hatch-defined shadows and energetic linework.\r\n\r\nENVIRONMENT:\r\nRESTYLE the entire alley background into a storyboard-ready comic plane: layered ink panels with tilted low-angle perspective, collapsed depth planes separated by textured brush smoke and two accent-color gel lights to define foreground and background planes without changing the subject pose. Add grit through rough wall hatching, scattered puddle reflections in graphic ink, and loose spray-ink grit near panel edges.\r\n\r\nRENDER PIPELINE:\r\nMEDIUM: comic-print 2D. RENDERING TECHNIQUE: bold pen-and-brush linework with raw cross-hatching midtones, controlled ink wash edges, and panel framing lines. Apply storyboard panel masks with rough hand-drawn gutters and tilts. LIGHTING MODEL: stylized graphic light with two gel accent lights implemented as flat color washes over selectively masked planes; maintain strong black silhouettes and high-contrast rim inks.\r\n\r\nCOLOR & LIGHT:\r\nUse a restricted palette: monochrome ink base plus two saturated accent gels (one warm, one cool) applied as separate lighting planes to push foreground/background separation. Shadows use neutral desaturated hatches; highlights are minimal flat white or paper gaps.\r\n\r\nMATERIALS & TEXTURES:\r\nSkin and fabric read as inked flat planes with hatch-built midtones and occasional brush-splash texture. Metal, wet pavement, and glass use dense black fills with sparse white spec lines and cross-hatch reflections. Smoke and atmosphere use textured dry brush strokes and grainy ink wash.\r\n\r\nDETAILS:\r\nInclude storyboard elements: numbered panel corner stamp, subtle pencil construction lines under the inks, and rough directional arrows for implied motion when present. Place textured brush smoke between planes to increase depth. Maintain tilted low-angle composition and ensure two accent-color gels are used consistently to separate foreground and background.\r\n\r\nSTYLE EXCLUSIONS:\r\nExclude photorealism, smooth digital painting, vector flat-icon style, generic cel-shading, and toy-like plastic rendering. Do not use cinematic photographic lens effects or realistic skin pore texture.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "comic"
+    ],
+    "published": true,
+    "sortOrder": 99,
+    "description": "",
+    "aspectRatio": "portrait"
+  },
+  {
+    "id": "prompt-monochrome-manga-action-portrait-effect",
+    "slug": "monochrome-manga-action-portrait-effect",
+    "title": "Monochrome Manga Action Portrait Effect",
+    "category": "Comic",
+    "coverImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/cover.png",
+    "referenceImages": [
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-1-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-2-result.png",
+      "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-3-result.png"
+    ],
+    "variants": [
+      {
+        "id": "var-1",
+        "label": "Variant 1",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-1-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-1-result.png"
+      },
+      {
+        "id": "var-2",
+        "label": "Variant 2",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-2-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-2-result.png"
+      },
+      {
+        "id": "var-3",
+        "label": "Variant 3",
+        "referenceImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-3-ref.jpg",
+        "resultImage": "https://cdn.jsdelivr.net/gh/amjadcp/sticky-sticker-gallery@main/Comic/Monochrome%20Manga%20Action%20Portrait%20Effect/variant-3-result.png"
+      }
+    ],
+    "promptText": "Convert the subject in this image into a 4x6 manga effect with a severe monochrome action finish, allowing full creative freedom to rebuild the scene into a high-intensity serialized confrontation. Preserve the subject’s recognizable identity while reinterpreting it through sharp editorial manga staging, aggressive black-white contrast, and disciplined graphic impact.\r\n\r\nCHARACTER:\r\nRender the subject as a commanding manga protagonist with a forceful silhouette, compact heroic anatomy, and tense forward energy. Keep the subject’s core facial identity intact while translating the face into native manga language: hard contour placement, simplified planes, piercing eye construction, and a severe expression built from minimal but decisive marks. The pose and costume logic must read like a battle-ready serialized hero, with clear shape hierarchy and strong visual priority on the subject.\r\n\r\nFACE & ANATOMY:\r\nUse blade-thin line articulation for facial features, with brows, nose, and mouth reduced to precise, expressive marks. Build the body with manga-lean proportions, taut limbs, enlarged gesture clarity, and clean hand definition that communicates impact without realism. Maintain the subject’s recognizable facial structure through native stylization, not caricature distortion.\r\n\r\nENVIRONMENT:\r\nRebuild the setting as a fractured confrontation space with broken tonal fields, compressed depth, and strong graphic separation between subject and background. Use negative space as an active compositional force, with environmental forms reduced to stark black shapes, tense voids, and serialized action cues. Keep the scene aggressive, readable, and visually stripped to essentials.\r\n\r\nRENDER PIPELINE:\r\nUse a pure comic manga render pipeline with high-contrast ink logic, decisive contour control, and layered black mass construction. Replace painterly blending with line density, hatching logic, solid shadow blocks, and crisp tonal segmentation that reads as authentic black-and-white print art. The finish must feel like a dramatic page from an intense action manga, not illustration, animation, or realistic render.\r\n\r\nCOLOR & LIGHT:\r\nLock the palette to monochrome only, with brutal value separation, deep ink blacks, clean whites, and bruised midtone pressure. Shape the lighting through graphic shadow placement, hard-edged highlight cuts, and severe contrast that amplifies emotional tension.\r\n\r\nMATERIALS & TEXTURES:\r\nTranslate skin, hair, fabric, and props into manga-appropriate tonal surfaces with inked contour authority, flat shadow depth, and restrained texture buildup. Any surface detail must emerge through hatching, stipple pressure, or solid black fill rather than realistic material simulation.\r\n\r\nDETAILS:\r\nUse impact-driven manga accents such as fractured shadow shapes, tension lines, speed-inflected energy marks, and tonal grit integrated into the page language. Preserve visual clarity by keeping every detail structural, ink-native, and battle-oriented.\r\n\r\nSTYLE EXCLUSIONS:\r\nReject photorealism, live-action realism, painterly realism, color comic rendering, soft anime gloss, and generic sketch effects. Do not drift into glossy 3D, watercolor, or polished cinematic treatment.",
+    "supportedTool": "Gemini",
+    "transformationType": "Photo Transformation",
+    "isPremium": false,
+    "tags": [
+      "comic"
     ],
     "published": true,
     "sortOrder": 99,
