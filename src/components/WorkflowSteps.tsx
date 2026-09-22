@@ -25,7 +25,7 @@ export const WorkflowSteps: React.FC = () => {
     {
       number: '03',
       title: 'Send on WhatsApp',
-      description: 'Click "Print Sticker" to message us on WhatsApp (+91 89215 86866). Send 3 items: 1. Image, 2. Size & Qty, and 3. Delivery Address.',
+      description: 'Click "Print Sticker" to message us on WhatsApp (+91 85907 97107). Send 3 items: 1. Image, 2. Size & Qty, and 3. Delivery Address.',
       icon: <MessageCircle className="w-5 h-5 text-indigo-primary" />,
     },
     {

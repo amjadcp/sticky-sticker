@@ -76,7 +76,7 @@ export const OrderModalProvider: React.FC<{ children: React.ReactNode }> = ({ ch
       '3. Delivery Address: [Full address with pincode & phone number]',
     ].join('\n');
 
-    const cleanNumber = siteConfig.whatsappCleanNumber || '918921586866';
+    const cleanNumber = siteConfig.whatsappCleanNumber || '918590797107';
     const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     setIsOpen(false);

@@ -55,7 +55,7 @@ export const DualPathSection: React.FC = () => {
                 <UploadCloud className="w-3.5 h-3.5 shrink-0" />
                 <span>Option B • Direct Upload</span>
               </span>
-              <span className="text-xs font-semibold text-indigo-primary font-mono shrink-0 whitespace-nowrap">From ₹49</span>
+              <span className="text-xs font-semibold text-indigo-primary font-mono shrink-0 whitespace-nowrap">From ₹48</span>
             </div>
 
             <h3 className="font-editorial text-xl sm:text-2xl font-bold text-ink group-hover:text-indigo-primary transition-colors">
@@ -63,7 +63,7 @@ export const DualPathSection: React.FC = () => {
             </h3>
 
             <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
-              Skip the AI completely. Have a picture of your pet, friends, family portrait, or personal photo? Send your details (Image, Size &amp; Qty, Delivery Address) directly to our WhatsApp (+91 89215 86866). We print your exact file onto durable sticker sheets with clean cuts.
+              Skip the AI completely. Have a picture of your pet, friends, family portrait, or personal photo? Send your details (Image, Size &amp; Qty, Delivery Address) directly to our WhatsApp (+91 85907 97107). We print your exact file onto durable sticker sheets with clean cuts.
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
-import { DualPathSection } from '../components/DualPathSection';
+import { StickerSizes } from '../components/StickerSizes';
 import { TrustBadges } from '../components/TrustBadges';
 import { CategoryFilters } from '../components/CategoryFilters';
 import { PromptGallery } from '../components/PromptGallery';
@@ -66,8 +66,8 @@ export const Home: React.FC = () => {
         {/* Full-Bleed 4-Column Hero Banner */}
         <Hero onSelectCategory={handleSelectCategory} />
 
-        {/* Two Clear Ways to Order (AI Prompts or Direct Photo Upload) */}
-        <DualPathSection />
+        {/* Sticker Sizes Banner */}
+        <StickerSizes />
 
         {/* Prompt Gallery & Filters Container */}
         <section id="designs" className="container-custom py-2 space-y-4">
@@ -82,7 +82,7 @@ export const Home: React.FC = () => {
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-ink-muted">
-              Pick a style to generate in Gemini/ChatGPT, then print with us from ₹49.
+              Pick a style to generate in Gemini/ChatGPT, then print with us from ₹48.
             </p>
           </div>
 

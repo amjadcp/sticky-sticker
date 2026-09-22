@@ -69,7 +69,7 @@ export const PromptCard: React.FC<PromptCardProps> = ({ prompt }) => {
           {/* Top Row: Price Tag & Like Button */}
           <div className="flex items-center justify-between gap-1 transform translate-y-0 sm:-translate-y-2 sm:group-hover:translate-y-0 transition-transform duration-300 pointer-events-auto">
             <span className="bg-black/60 backdrop-blur-md text-white/95 text-[10px] sm:text-[11px] font-semibold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-white/15 shadow-sm whitespace-nowrap shrink-0 font-mono">
-              From ₹49
+              From ₹48
             </span>
             
             <button 
