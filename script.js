@@ -14,8 +14,12 @@
  *             └── variant-2-result.png
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // GitHub Repo Config (Update these for your repository)
 const GITHUB_USER = 'YOUR_GITHUB_USERNAME';
@@ -179,8 +183,12 @@ function generatePrompts(repoRootDir) {
   return prompts;
 }
 
+import { pathToFileURL } from 'url';
+
 // Run script directly if called from CLI (e.g., node script.js)
-if (require.main === module) {
+const isMain = import.meta.url === pathToFileURL(process.argv[1]).href;
+
+if (isMain) {
   // You can pass a directory argument, or it defaults to the directory where the script is located
   const rootDir = process.argv[2] || __dirname;
   
@@ -196,4 +204,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { generatePrompts, slugify };
+export { generatePrompts, slugify };
