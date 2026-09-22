@@ -100,7 +100,7 @@ export const Hero: React.FC<HeroProps> = () => {
     if (!isPaused && fullScreenIndex === null) {
       autoPlayRef.current = setInterval(() => {
         nextSlide();
-      }, 5000);
+      }, 1000);
     }
     return () => {
       if (autoPlayRef.current) {
