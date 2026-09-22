@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = () => {
   const { openOrderModal } = useOrderModal();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
+  const [fullScreenIndex, setFullScreenIndex] = useState<number | null>(null);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   const nextSlide = () => {
@@ -74,8 +74,30 @@ export const Hero: React.FC<HeroProps> = () => {
     setActiveIndex((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
   };
 
+  const imageSlideIndices = HERO_SLIDES.map((s, i) => (s.type === 'image' && s.image ? i : -1)).filter((i) => i !== -1);
+
+  const nextFullScreenSlide = (e?: React.MouseEvent | React.TouchEvent) => {
+    if (e) e.stopPropagation();
+    if (fullScreenIndex === null) return;
+    const currentPos = imageSlideIndices.indexOf(fullScreenIndex);
+    const nextPos = (currentPos + 1) % imageSlideIndices.length;
+    const newIdx = imageSlideIndices[nextPos];
+    setFullScreenIndex(newIdx);
+    setActiveIndex(newIdx);
+  };
+
+  const prevFullScreenSlide = (e?: React.MouseEvent | React.TouchEvent) => {
+    if (e) e.stopPropagation();
+    if (fullScreenIndex === null) return;
+    const currentPos = imageSlideIndices.indexOf(fullScreenIndex);
+    const prevPos = (currentPos - 1 + imageSlideIndices.length) % imageSlideIndices.length;
+    const newIdx = imageSlideIndices[prevPos];
+    setFullScreenIndex(newIdx);
+    setActiveIndex(newIdx);
+  };
+
   useEffect(() => {
-    if (!isPaused) {
+    if (!isPaused && fullScreenIndex === null) {
       autoPlayRef.current = setInterval(() => {
         nextSlide();
       }, 5000);
@@ -85,7 +107,7 @@ export const Hero: React.FC<HeroProps> = () => {
         clearInterval(autoPlayRef.current);
       }
     };
-  }, [isPaused, activeIndex]);
+  }, [isPaused, activeIndex, fullScreenIndex]);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -119,6 +141,32 @@ export const Hero: React.FC<HeroProps> = () => {
     
     touchStartX.current = null;
     touchEndX.current = null;
+  };
+
+  const modalTouchStartX = useRef<number | null>(null);
+  const modalTouchEndX = useRef<number | null>(null);
+
+  const handleModalTouchStart = (e: React.TouchEvent) => {
+    modalTouchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleModalTouchMove = (e: React.TouchEvent) => {
+    modalTouchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleModalTouchEnd = (e: React.TouchEvent) => {
+    if (!modalTouchStartX.current || !modalTouchEndX.current) return;
+    const distance = modalTouchStartX.current - modalTouchEndX.current;
+    const minSwipeDistance = 40;
+
+    if (distance > minSwipeDistance) {
+      nextFullScreenSlide(e);
+    } else if (distance < -minSwipeDistance) {
+      prevFullScreenSlide(e);
+    }
+    
+    modalTouchStartX.current = null;
+    modalTouchEndX.current = null;
   };
 
   return (
@@ -203,7 +251,7 @@ export const Hero: React.FC<HeroProps> = () => {
 
                   {/* Fullscreen Button */}
                   <button
-                    onClick={() => setFullScreenImage(slide.image || null)}
+                    onClick={() => setFullScreenIndex(idx)}
                     className="absolute top-4 sm:top-6 right-4 sm:right-6 z-20 p-2 sm:p-2.5 bg-black/40 hover:bg-black/70 text-white rounded-full backdrop-blur-sm border border-white/20 transition-all opacity-100 sm:opacity-0 sm:group-hover/slide:opacity-100 pointer-events-auto shadow-lg"
                     title="View Fullscreen"
                   >
@@ -296,25 +344,69 @@ export const Hero: React.FC<HeroProps> = () => {
       </div>
 
       {/* Fullscreen Image Modal */}
-      {fullScreenImage && (
+      {fullScreenIndex !== null && HERO_SLIDES[fullScreenIndex] && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-8"
-          onClick={() => setFullScreenImage(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-8 select-none"
+          onClick={() => setFullScreenIndex(null)}
+          onTouchStart={handleModalTouchStart}
+          onTouchMove={handleModalTouchMove}
+          onTouchEnd={handleModalTouchEnd}
         >
+          {/* Close Button */}
           <button
-            onClick={() => setFullScreenImage(null)}
-            className="absolute top-4 sm:top-6 right-4 sm:right-6 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all border border-white/10 shadow-lg"
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setFullScreenIndex(null);
+            }}
+            onTouchEnd={(e) => {
+              e.stopPropagation();
+              setFullScreenIndex(null);
+            }}
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-black/60 hover:bg-black/80 active:scale-95 text-white rounded-full transition-all border border-white/20 shadow-xl z-[110] cursor-pointer touch-manipulation backdrop-blur-md"
             title="Close Fullscreen"
+            aria-label="Close Fullscreen"
           >
-            <X className="w-6 h-6" />
+            <X className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </button>
-          
-          <img 
-            src={fullScreenImage} 
-            alt="Fullscreen View" 
-            className="w-full h-full max-w-7xl max-h-[90vh] object-contain rounded-lg shadow-2xl drop-shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
+
+          {/* Left Chevron Button */}
+          <button
+            type="button"
+            onClick={prevFullScreenSlide}
+            onTouchEnd={prevFullScreenSlide}
+            className="absolute left-2 sm:left-6 z-[110] p-1.5 sm:p-2.5 bg-black/50 hover:bg-indigo-primary text-white rounded-full border border-white/20 shadow-xl backdrop-blur-md transition-all hover:scale-110 active:scale-95 cursor-pointer touch-manipulation"
+            title="Previous Image"
+          >
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+          </button>
+
+          {/* Right Chevron Button */}
+          <button
+            type="button"
+            onClick={nextFullScreenSlide}
+            onTouchEnd={nextFullScreenSlide}
+            className="absolute right-2 sm:right-6 z-[110] p-1.5 sm:p-2.5 bg-black/50 hover:bg-indigo-primary text-white rounded-full border border-white/20 shadow-xl backdrop-blur-md transition-all hover:scale-110 active:scale-95 cursor-pointer touch-manipulation"
+            title="Next Image"
+          >
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+          </button>
+
+          {/* Fullscreen Image Display */}
+          <div className="relative w-full h-full max-w-7xl max-h-[85vh] sm:max-h-[90vh] flex items-center justify-center pointer-events-none">
+            <img 
+              key={HERO_SLIDES[fullScreenIndex].id}
+              src={HERO_SLIDES[fullScreenIndex].image} 
+              alt={HERO_SLIDES[fullScreenIndex].title} 
+              className="w-full h-full object-contain rounded-lg shadow-2xl drop-shadow-2xl transition-all duration-300 pointer-events-auto"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+
+          {/* Counter Indicator (e.g. 1 / 4) */}
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-[110] bg-black/60 backdrop-blur-md text-white/90 text-xs font-mono font-semibold px-3 py-1 rounded-full border border-white/20 shadow-lg pointer-events-none">
+            {imageSlideIndices.indexOf(fullScreenIndex) + 1} / {imageSlideIndices.length}
+          </div>
         </div>
       )}
     </section>
