@@ -25,33 +25,81 @@ const HERO_SLIDES: HeroSlide[] = [
     id: 'sample-4',
     number: '02',
     type: 'image',
-    title: 'GTA 3D Character Print',
+    title: '3D Custom Character Print',
     category: '3D Photo Style',
-    image: '/samples/sample-4.png',
+    image: '/samples/sample-1.png',
   },
   {
     id: 'sample-1',
     number: '03',
     type: 'image',
-    title: 'Single Waterproof 4x6 Print',
+    title: 'GTA VI Custom Portrait Print',
     category: 'Anime & Character',
-    image: '/samples/sample-1.png',
+    image: '/samples/sample-2.jpg',
   },
   {
     id: 'sample-2',
     number: '04',
     type: 'image',
-    title: 'Multi-Sticker Fan Pack',
+    title: 'Hulk 3D Character Sticker Set',
     category: 'Variant Pack',
-    image: '/samples/sample-2.jpg',
+    image: '/samples/sample-3.jpg',
   },
   {
     id: 'sample-3',
     number: '05',
     type: 'image',
-    title: 'Workspace & Desk Showcase',
+    title: 'Iron Man 3D Character Sticker Set',
     category: 'Vinyl Cutouts',
-    image: '/samples/sample-3.jpg',
+    image: '/samples/sample-4.jpg',
+  },
+  {
+    id: 'sample-5',
+    number: '06',
+    type: 'image',
+    title: 'One Piece Fan Art Sticker Set',
+    category: 'Vinyl Cutouts',
+    image: '/samples/sample-5.png',
+  },
+  {
+    id: 'sample-6',
+    number: '07',
+    type: 'image',
+    title: 'One Piece Character Sticker Set',
+    category: 'Vinyl Cutouts',
+    image: '/samples/sample-6.png',
+  },
+  {
+    id: 'sample-7',
+    number: '08',
+    type: 'image',
+    title: 'One Piece Luffy Logo Sticker',
+    category: 'Vinyl Cutouts',
+    image: '/samples/sample-7.png',
+  },
+  {
+    id: 'sample-8',
+    number: '09',
+    type: 'image',
+    title: 'Iron Man 3D Character Sticker Set',
+    category: 'Vinyl Cutouts',
+    image: '/samples/sample-8.png',
+  },
+  {
+    id: 'sample-9',
+    number: '10',
+    type: 'image',
+    title: 'Hulk 3D Character Sticker Set',
+    category: 'Vinyl Cutouts',
+    image: '/samples/sample-9.png',
+  },
+  {
+    id: 'sample-10',
+    number: '11',
+    type: 'image',
+    title: 'Money Heist Quote Sticker',
+    category: 'Vinyl Cutouts',
+    image: '/samples/sample-10.jpg',
   },
 ];
 
@@ -100,7 +148,7 @@ export const Hero: React.FC<HeroProps> = () => {
     if (!isPaused && fullScreenIndex === null) {
       autoPlayRef.current = setInterval(() => {
         nextSlide();
-      }, 1000);
+      }, 2000);
     }
     return () => {
       if (autoPlayRef.current) {
