@@ -29,19 +29,10 @@ export const WhatsAppFloatingButton: React.FC = () => {
 
   return (
     <div
-      className="fixed bottom-5 right-5 z-50 flex items-center gap-2"
+      className="fixed bottom-5 left-5 z-50 flex items-center gap-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Label Tag on Desktop */}
-      <span
-        className={`hidden sm:inline-block bg-surface border border-border-subtle text-ink font-semibold text-xs py-1.5 px-3 rounded-full shadow-md transition-all duration-200 pointer-events-none ${
-          isHovered ? 'opacity-100 translate-x-0' : 'opacity-90 -translate-x-1'
-        }`}
-      >
-        Customer Care
-      </span>
-
       {/* Floating Button */}
       <button
         onClick={handleClick}
@@ -53,6 +44,15 @@ export const WhatsAppFloatingButton: React.FC = () => {
 
         <WhatsAppIcon className="w-6 h-6 fill-white relative z-10" />
       </button>
+
+      {/* Label Tag on Desktop */}
+      <span
+        className={`hidden sm:inline-block bg-surface border border-border-subtle text-ink font-semibold text-xs py-1.5 px-3 rounded-full shadow-md transition-all duration-200 pointer-events-none ${
+          isHovered ? 'opacity-100 translate-x-0' : 'opacity-90 translate-x-1'
+        }`}
+      >
+        Customer Care
+      </span>
     </div>
   );
 };
