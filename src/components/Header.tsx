@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
         >
           <div className="w-10 h-10 rounded-xl overflow-hidden shadow-indigo-glow group-hover:scale-105 transition-transform duration-200 bg-indigo-primary flex items-center justify-center">
             <img 
-              src="/brand-icon.jpg" 
+              src="/brand-icon.png" 
               alt={`${siteConfig.brandName} Icon`}
               className="w-full h-full object-cover"
             />
